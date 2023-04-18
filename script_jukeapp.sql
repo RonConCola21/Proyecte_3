@@ -1,61 +1,61 @@
-drop table if exists  active_token cascade;
-drop table if exists  queue cascade;
-drop table if exists  petition_queue cascade;
-drop table if exists  petition cascade;
-drop table if exists  users cascade;
-drop table if exists  song cascade;
+drop table if exists active_token;
+drop table if exists queue;
+drop table if exists petition_queue;
+drop table if exists petition;
+drop table if exists users;
+drop table if exists song;
 
 create table song(
-	song_id int,
-    song_spotify_id varchar(80),
-   	artist varchar(80),
-   	song_name varchar(80),
-    song_duration int,
-   	status char,
-   	primary key (song_id),
-   	constraint check_song_status check (status in ('w','b','p')),
-    unique (song_spotify_id)
+	son_id int,
+    son_spotify_id varchar(80) not null,
+   	son_artist varchar(80) not null,
+   	son_name varchar(80) not null,
+    son_duration int not null,
+   	son_status char not null,
+   	constraint pk_song primary key (son_id),
+   	constraint check_song_status check (son_status in ('w','b','p')),
+    constraint unique_son_spotify_id unique (son_spotify_id)
 );
 
 create table users (
-	users_id int,
-    users_nick varchar(80),
-    email varchar(80),
-    password varchar(80),
-    tokens int,
-    primary key (users_id),
-    unique (users_nick),
-    unique (email)
+	user_id int,
+    user_nick varchar(80) not null,
+    user_email varchar(80) not null,
+    user_password varchar(80) not null,
+    user_tokens int default 0,
+    constraint pk_users primary key (user_id),
+    constraint unique_users_nick unique (user_nick),
+    constraint unique_users_email unique (user_email)
 );
 
 create table petition(
-	song_id int,
-    primary key (song_id),
-    foreign key fk_petition_song (song_id) references song(song_id)
+	pet_song_id int,
+    constraint pk_petition primary key (pet_song_id),
+    foreign key fk_petition_song (pet_song_id) references song(son_id)
 );
 
 create table petition_queue(
-	song_id int,
-    users_id int,
-    moment_temp datetime,
-    primary key (song_id, users_id),
-    foreign key fk_petition_queue_song (song_id) references petition(song_id),
-    foreign key fk_petition_queue_users(users_id) references users(users_id)
+	pq_song_id int,
+    pq_users_id int,
+    pq_moment_temp datetime not null,
+    constraint pk_petition_queue primary key (pq_song_id, pq_users_id),
+    foreign key fk_petition_queue_song (pq_song_id) references petition(pet_song_id),
+    foreign key fk_petition_queue_users (pq_users_id) references users(user_id)
 );
 
 create table active_token(
-	token_id int,
-    moment_temp datetime,
-    cadena varchar(80),
-    value int,
-    primary key (token_id)
+	at_id int,
+    at_moment_temp datetime not null,
+    at_cadena varchar(80) not null,
+    at_value int not null,
+    primary key (at_id)
 );
 
 create table queue(
-	song_id int,
-    users_id int,
-    moment_temp datetime,
-   	primary key (song_id, users_id),
-    foreign key fk_queue_song (song_id) references song(song_id),
-    foreign key fk_queue_users (users_id) references users(users_id)
+	que_song_id int,
+    que_users_id int,
+    que_moment_temp datetime not null,
+   	primary key (que_song_id, que_users_id),
+    foreign key fk_queue_song (que_song_id) references song(son_id),
+    foreign key fk_queue_users (que_users_id) references users(user_id)
 );
