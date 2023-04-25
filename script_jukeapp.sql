@@ -6,7 +6,8 @@ drop table if exists users;
 drop table if exists song;
 
 create table song(
-	son_id int,
+    son_id int AUTO_INCREMENT ,
+    son_img varchar(100) not null,
     son_spotify_id varchar(80) not null,
    	son_artist varchar(80) not null,
    	son_name varchar(80) not null,
@@ -18,7 +19,7 @@ create table song(
 );
 
 create table users (
-	user_id int,
+	user_id int AUTO_INCREMENT ,
     user_nick varchar(80) not null,
     user_email varchar(80) not null,
     user_password varchar(80) not null,
@@ -29,7 +30,7 @@ create table users (
 );
 
 create table petition(
-	pet_song_id int,
+	pet_song_id int AUTO_INCREMENT ,
     constraint pk_petition primary key (pet_song_id),
     foreign key fk_petition_song (pet_song_id) references song(son_id)
 );
@@ -44,7 +45,7 @@ create table petition_queue(
 );
 
 create table active_token(
-	at_id int,
+	at_id int AUTO_INCREMENT ,
     at_moment_temp datetime not null,
     at_cadena varchar(80) not null,
     at_value int not null,
@@ -59,3 +60,5 @@ create table queue(
     foreign key fk_queue_song (que_song_id) references song(son_id),
     foreign key fk_queue_users (que_users_id) references users(user_id)
 );
+
+
