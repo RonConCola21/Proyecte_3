@@ -9,7 +9,8 @@ create table song(
     son_id int AUTO_INCREMENT ,
     son_img varchar(100) not null,
     son_spotify_id varchar(80) not null,
-   	son_artist varchar(80) not null,
+   	son_artist1 varchar(80) not null,
+    son_artist2 varchar(80),
    	son_name varchar(80) not null,
     son_duration int not null,
    	son_status char not null,
@@ -45,18 +46,19 @@ create table petition_queue(
 );
 
 create table active_token(
-	at_id int AUTO_INCREMENT ,
+	at_id int AUTO_INCREMENT,
     at_moment_temp datetime not null,
     at_cadena varchar(80) not null,
     at_value int not null,
-    primary key (at_id)
+    constraint pk_active_token primary key (at_id),
+    constraint unique_at_cadena unique (at_cadena)
 );
 
 create table queue(
 	que_song_id int,
     que_users_id int,
     que_moment_temp datetime not null,
-   	primary key (que_song_id, que_users_id),
+   	primary key (que_moment_temp, que_users_id),
     foreign key fk_queue_song (que_song_id) references song(son_id),
     foreign key fk_queue_users (que_users_id) references users(user_id)
 );
@@ -69,5 +71,12 @@ insert into active_token values (null, sysdate(), 'akdgvjbalsdfhjblaskdjvasnñlg
 insert into active_token values (null, sysdate(), 'kjbclabncasvjlasdnv,ahsdvlasdbvads', 50);
 insert into active_token values (null, sysdate(), 'asdvasdalsdfhjblaskdjvasnñlgnkanba', 100);
 
+insert into song values (null, 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228', '2up3OPMp9Tb4dAKM2erWXQ', 'Carles Ferrer', 'Manel Paez', 'La madre', 180, 'w');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228', '2up3OPMp9TzcvAKM2erWXQ', 'Carles Ferrer', null, 'El padre', 120, 'b');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228', '2up3OPMp9dAKbxcbM2erWXQ', 'Manel Páez', null, 'El hijo y espíritu Santo', 240, 'p');
 
+insert into petition values (3);
+insert into petition_queue values (3,1,sysdate());
+
+insert into queue values (1,2,sysdate());
 
