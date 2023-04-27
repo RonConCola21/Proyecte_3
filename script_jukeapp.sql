@@ -61,4 +61,9 @@ create table queue(
     foreign key fk_queue_users (que_users_id) references users(user_id)
 );
 
+insert into users values (null,'admin','admin@gmail.com', 'admin', 0);
+insert into users values (null,'cferrer1','cferrer1@milaifontanals.org', 'admin', 0);
+insert into users values (null,'mpaez','mpaez@milaifontanals.org', 'admin', 0);
+
+
 
