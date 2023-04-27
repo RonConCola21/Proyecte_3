@@ -65,5 +65,9 @@ insert into users values (null,'admin','admin@gmail.com', 'admin', 0);
 insert into users values (null,'cferrer1','cferrer1@milaifontanals.org', 'admin', 0);
 insert into users values (null,'mpaez','mpaez@milaifontanals.org', 'admin', 0);
 
+insert into active_token values (null, sysdate(), 'akdgvjbalsdfhjblaskdjvasnñlgnkanba', 100);
+insert into active_token values (null, sysdate(), 'kjbclabncasvjlasdnv,ahsdvlasdbvads', 50);
+insert into active_token values (null, sysdate(), 'asdvasdalsdfhjblaskdjvasnñlgnkanba', 100);
+
 
 
