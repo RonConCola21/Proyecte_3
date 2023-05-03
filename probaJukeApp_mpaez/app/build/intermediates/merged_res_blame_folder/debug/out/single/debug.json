@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\drawable_nav_playlist.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\drawable\\nav_playlist.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\drawable_nav_whitelist.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\drawable\\nav_whitelist.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\drawable_nav_list.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\drawable\\nav_list.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\layout_fila_song.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\layout\\fila_song.xml"
+    },
+    {
+        "merged": "com.example.probajukeapp-merged_res-4:/layout_fragment_playlist.xml.flat",
+        "source": "com.example.probajukeapp-main-6:/layout/fragment_playlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\drawable_qr_code.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\drawable\\qr_code.png"
+    },
+    {
+        "merged": "com.example.probajukeapp-merged_res-4:/layout_fila_song.xml.flat",
+        "source": "com.example.probajukeapp-main-6:/layout/fila_song.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\drawable_nav_profile.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\drawable\\nav_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\drawable_nav_blacklist.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\drawable\\nav_blacklist.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\layout_fragment_qr.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\layout\\fragment_qr.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\layout_fragment_whitelist.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\layout\\fragment_whitelist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\layout_fragment_playlist.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\layout\\fragment_playlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\menu_menu_navigation.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\menu\\menu_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\layout_fragment_blacklist.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\layout\\fragment_blacklist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\navigation_nav_schema.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\navigation\\nav_schema.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\layout_fragment_requestlist.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\layout\\fragment_requestlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-merged_res-4:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.probajukeapp-main-6:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    }
+]

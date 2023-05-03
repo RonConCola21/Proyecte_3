@@ -1,0 +1,114 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.probajukeapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.9.0] C:\Users\Manuel\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.probajukeapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.9.0] C:\Users\Manuel\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.9.0] C:\Users\Manuel\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.probajukeapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.9.0] C:\Users\Manuel\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.9.0] C:\Users\Manuel\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:7:5-27:19
+20        android:allowBackup="true"
+20-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:8:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.9.0] C:\Users\Manuel\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:9:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:10:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:14:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.ProbaJukeApp" >
+31-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:15:9-50
+32        <activity
+32-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:17:9-26:20
+33            android:name="com.example.probajukeapp.MainActivity"
+33-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:18:13-41
+34            android:exported="true" >
+34-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:19:13-36
+35            <intent-filter>
+35-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:20:13-25:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:21:17-69
+36-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:21:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:23:17-77
+38-->C:\SEGUNDO_CURSO\Proyecto3\probaJukeApp2\app\src\main\AndroidManifest.xml:23:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <provider
+42-->[com.squareup.picasso:picasso:2.71828] C:\Users\Manuel\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+43            android:name="com.squareup.picasso.PicassoProvider"
+43-->[com.squareup.picasso:picasso:2.71828] C:\Users\Manuel\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+44            android:authorities="com.example.probajukeapp.com.squareup.picasso"
+44-->[com.squareup.picasso:picasso:2.71828] C:\Users\Manuel\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+45            android:exported="false" />
+45-->[com.squareup.picasso:picasso:2.71828] C:\Users\Manuel\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+46
+47        <uses-library
+47-->[androidx.window:window:1.0.0] C:\Users\Manuel\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+48            android:name="androidx.window.extensions"
+48-->[androidx.window:window:1.0.0] C:\Users\Manuel\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+49            android:required="false" />
+49-->[androidx.window:window:1.0.0] C:\Users\Manuel\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+50        <uses-library
+50-->[androidx.window:window:1.0.0] C:\Users\Manuel\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+51            android:name="androidx.window.sidecar"
+51-->[androidx.window:window:1.0.0] C:\Users\Manuel\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+52            android:required="false" />
+52-->[androidx.window:window:1.0.0] C:\Users\Manuel\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+53
+54        <provider
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Manuel\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+55            android:name="androidx.startup.InitializationProvider"
+55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Manuel\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+56            android:authorities="com.example.probajukeapp.androidx-startup"
+56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Manuel\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+57            android:exported="false" >
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Manuel\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+58            <meta-data
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Manuel\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+59                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Manuel\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+60                android:value="androidx.startup" />
+60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Manuel\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+61            <meta-data
+61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Manuel\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+62                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+62-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Manuel\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+63                android:value="androidx.startup" />
+63-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Manuel\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+64        </provider>
+65    </application>
+66
+67</manifest>
