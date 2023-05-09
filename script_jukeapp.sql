@@ -11,6 +11,7 @@ create table song(
     son_spotify_id varchar(80) not null,
    	son_artist1 varchar(80) not null,
     son_artist2 varchar(80),
+	son_album varchar(40) not null,
    	son_name varchar(80) not null,
     son_duration int not null,
    	son_status char not null,
@@ -71,12 +72,19 @@ insert into active_token values (null, sysdate(), 'akdgvjbalsdfhjblaskdjvasnñlg
 insert into active_token values (null, sysdate(), 'kjbclabncasvjlasdnv,ahsdvlasdbvads', 50);
 insert into active_token values (null, sysdate(), 'asdvasdalsdfhjblaskdjvasnñlgnkanba', 100);
 
-insert into song values (null, 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228', '2up3OPMp9Tb4dAKM2erWXQ', 'Carles Ferrer', 'Manel Paez', 'La madre', 180, 'w');
-insert into song values (null, 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228', '2up3OPMp9TzcvAKM2erWXQ', 'Carles Ferrer', null, 'El padre', 120, 'b');
-insert into song values (null, 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228', '2up3OPMp9dAKbxcbM2erWXQ', 'Manel Páez', null, 'El hijo y espíritu Santo', 240, 'p');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b27329ebee2b5fb008871fcd201a', '6XSqqQIy7Lm7SnwxS4NrGx', 'Young Miko', 'Feid', 'Single', 'Classy 101', 195, 'w');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b2731e0950bcdb5495e2038e0d14', '5MxFWjuqQIsbNWbMdMdbli', 'Bad Bunny', 'Arcàngel', 'Single', 'La Jumpa', 236, 'b');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273ed132404686f567c8f793058', '54ELExv56KCAB4UP9cOCzC', 'Ñego Flow', 'Bad Bunny', 'Single', 'Gato de noche', 227, 'p');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b2737cc7b0d6a82846cd8b158f99', '0CYTGMBYkwUxrj1MWDLrC5', 'Feid', null, 'Single', 'Chorrito Pa Las Ánimas', 168, 'w');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273d12510170b4c55664e96e9a5', '4DuUwzP4ALMqpquHU0ltAB', 'Jack Harlow', null, 'Single', 'Tyler Herro', 157, 'b');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273d12510170b4c55664e96e9a5', '3kUq4sBcmxhnOtNysZ9yrp', 'Feid', null, 'Single', 'Feliz Cumpleaños Ferxo', 156, 'p');
 
 insert into petition values (3);
-insert into petition_queue values (3,1,sysdate());
+insert into petition values (6);
+
+insert into petition_queue values (3,2,sysdate());
+insert into petition_queue values (6,3,SYSDATE());
 
 insert into queue values (1,2,sysdate());
+insert into queue values (4,3,sysdate());
 
