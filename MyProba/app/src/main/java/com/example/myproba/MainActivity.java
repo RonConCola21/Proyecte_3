@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.example.myproba.api.Song;
+import com.example.myproba.api.WSGetSongs;
 import com.example.myproba.interfaz.SongApi;
-import com.example.myproba.models.Song;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -44,21 +45,23 @@ public class MainActivity extends AppCompatActivity {
                 .client(okHttpClient)
                 .build();
         SongApi songApi = retrofit.create(SongApi.class);
-        Call<List<Song>> call = songApi.getSongs();
-        call.enqueue(new Callback<List<Song>>() {
+        Call<WSGetSongs> call = songApi.getSongs();
+        call.enqueue(new Callback<WSGetSongs>() {
             @Override
-            public void onResponse(Call<List<Song>> call, Response<List<Song>> response) {
+            public void onResponse(Call<WSGetSongs> call, Response<WSGetSongs> response) {
                 if(response.isSuccessful()){
-                    List<Song> respuesta = response.body();
-                    for (Song song : respuesta){
-                        Log.i("Song_id", Integer.toString(song.getSon_id()));
-                        Log.i("Song_img", song.getSon_img());
-                        Log.i("Song_spotify_id", song.getSon_spotify_id());
-                        Log.i("Song_artist1", song.getSon_artist1());
-                        Log.i("Song_artist2", song.getSon_artist2());
-                        Log.i("Song_name", song.getSon_name());
-                        Log.i("Song_duration", Integer.toString(song.getSon_duration()));
-                        Log.i("Song_status", Integer.toString(song.getSon_status()));
+                    WSGetSongs respuesta = response.body();
+                    for (Song song : respuesta.getData()){
+                        Log.i("Song_id", Integer.toString(song.getSonId()));
+                        Log.i("Song_img", song.getSonImg());
+                        Log.i("Song_spotify_id", song.getSonSpotifyId());
+                        Log.i("Song_artist1", song.getSonArtist1());
+                        if (song.getSonArtist2() != null){
+                            Log.i("Song_artist2", song.getSonArtist2());
+                        }
+                        Log.i("Song_name", song.getSonName());
+                        Log.i("Song_duration", Integer.toString(song.getSonDuration()));
+                        Log.i("Song_status", song.getSonStatus());
                     }
 
                 }
@@ -68,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<Song>> call, Throwable t) {
-                Log.i("Error", t.getMessage());
+            public void onFailure(Call<WSGetSongs> call, Throwable t) {
+                Log.e("Error Failure", t.getMessage(),t);
             }
         });
 

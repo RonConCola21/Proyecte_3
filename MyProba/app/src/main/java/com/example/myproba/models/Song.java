@@ -8,9 +8,9 @@ public class Song {
     private String son_artist2;
     private String son_name;
     private int son_duration;
-    private int son_status;
+    private String son_status;
 
-    public Song(int son_id, String son_img, String son_spotify_id, String son_artist1, String son_artist2, String son_name, int son_duration, int son_status) {
+    public Song(int son_id, String son_img, String son_spotify_id, String son_artist1, String son_artist2, String son_name, int son_duration, String son_status) {
         this.son_id = son_id;
         this.son_img = son_img;
         this.son_spotify_id = son_spotify_id;
@@ -77,11 +77,11 @@ public class Song {
         this.son_duration = son_duration;
     }
 
-    public int getSon_status() {
+    public String getSon_status() {
         return son_status;
     }
 
-    public void setSon_status(int son_status) {
+    public void setSon_status(String son_status) {
         this.son_status = son_status;
     }
 }

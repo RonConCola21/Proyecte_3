@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11818148-7e8e-458d-a146-9bbbbeff2ec7" name="Changes" comment="" />
+    <list default="true" id="11818148-7e8e-458d-a146-9bbbbeff2ec7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../MyProba/app/src/main/java/com/example/myproba/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyProba/app/src/main/java/com/example/myproba/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyProba/app/src/main/java/com/example/myproba/interfaz/SongApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyProba/app/src/main/java/com/example/myproba/interfaz/SongApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyProba/app/src/main/java/com/example/myproba/models/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyProba/app/src/main/java/com/example/myproba/models/Song.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +58,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "last_directory_selection": "C:/SEGUNDO_CURSO/Proyecto3/probaJukeApp2/app/src/main/res/drawable",
-    "last_opened_file_path": "C:/SEGUNDO_CURSO/Proyecto3/MyProba"
+    "last_opened_file_path": "C:/SEGUNDO_CURSO/Proyecto3/ProbaJukeApp"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -136,5 +140,16 @@
       <updated>1681927790895</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
