@@ -14,17 +14,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.jukeapp.R;
+import com.example.jukeapp.databinding.FragmentLogInBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class LogInFragment extends Fragment implements View.OnClickListener{
     private BottomNavigationView bottomNav;
-    private Button btnLogin;
-    private Button btnSignin;
-    private Button btnForgotPassword;
-    private EditText mEdtEmail;
-    private EditText mEdtPassword;
-    private TextView mTxvError;
+
+    FragmentLogInBinding binding;
+
     private NavController navController;
     public LogInFragment() {
         // Required empty public constructor
@@ -47,35 +45,29 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_log_in, container, false);
-        btnLogin = view.findViewById(R.id.btnLogin);
-        btnSignin = view.findViewById(R.id.btnSignin);
-        btnForgotPassword = view.findViewById(R.id.btnForgottenPassword);
-        mEdtEmail = view.findViewById(R.id.edtUser);
-        mEdtPassword = view.findViewById(R.id.edtPassword);
-        mTxvError = view.findViewById(R.id.txvError);
+        binding = FragmentLogInBinding.inflate(inflater, container, false);
         bottomNav = getActivity().findViewById(R.id.menu_nav);
         bottomNav.setVisibility(View.GONE);
-        btnLogin.setOnClickListener(this);
-        btnSignin.setOnClickListener(this);
-        btnForgotPassword.setOnClickListener(this);
-        mTxvError.setText("");
-        return view;
+        binding.btnLogin.setOnClickListener(this);
+        binding.btnSignin.setOnClickListener(this);
+        binding.btnForgottenPassword.setOnClickListener(this);
+        binding.txvError.setText("");
+        return binding.getRoot();
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnLogin:
-                String email = mEdtEmail.getText().toString();
-                String password = mEdtPassword.getText().toString();
+                String email = binding.edtUser.getText().toString();
+                String password = binding.edtPassword.getText().toString();
                 if (email.isEmpty() || password.isEmpty()){
-                    mTxvError.setBackgroundColor(getResources().getColor(R.color.purple_500));
-                    mTxvError.setText("Please fill all the fields");
+                    binding.txvError.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                    binding.txvError.setText("Please fill all the fields");
                 }else{
-                    mTxvError.setText("");
-                    mEdtEmail.setText("");
-                    mEdtPassword.setText("");
+                    binding.txvError.setText("");
+                    binding.edtUser.setText("");
+                    binding.edtPassword.setText("");
                     navController = NavHostFragment.findNavController(LogInFragment.this);
                     navController.navigate(R.id.action_logInFragment_to_whitelistFragment);
                 }

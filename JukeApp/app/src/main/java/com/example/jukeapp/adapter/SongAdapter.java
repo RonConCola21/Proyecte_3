@@ -1,6 +1,5 @@
 package com.example.jukeapp.adapter;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.jukeapp.R;
 import com.example.jukeapp.models.Song;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -26,6 +26,15 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
     public SongAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View fila = LayoutInflater.from(parent.getContext()).inflate(R.layout.fila, parent, false);
         ViewHolder vh = new ViewHolder(fila);
+        fila.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int pos = vh.getAdapterPosition();
+                Song s = mSongs.get(pos);
+                if(mListener!=null) mListener.onSongSelected(s);
+                notifyItemChanged(pos);
+            }
+        });
         return vh;
     }
 
@@ -37,7 +46,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
         holder.txvArtist2.setText(s.getArtist2());
         holder.txvDuration.setText(s.getDuration()+"");
         holder.txvAlbum.setText(s.getAlbum());
-        holder.imvImage.setImageResource(R.drawable.cover);
+        Picasso.get().load(s.getImage()).into(holder.imvImage);
     }
 
     @Override

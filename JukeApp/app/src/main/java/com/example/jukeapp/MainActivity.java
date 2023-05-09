@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
         // set flag to true and show toast message
         doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Prem una altra vegada per sortir", Toast.LENGTH_SHORT).show();
 
         // reset flag after a short delay (2 seconds)
         mHandler.postDelayed(new Runnable() {

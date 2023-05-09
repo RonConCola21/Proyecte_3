@@ -5,23 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintVertical_weight="1"
-        android:src="@drawable/background2"
-        app:layout_constraintLeft_toLeftOf="@id/grdl"
-        app:layout_constraintTop_toTopOf="@id/grdl"
-        app:layout_constraintRight_toRightOf="@id/grdl"
-        app:layout_constraintBottom_toBottomOf="@id/grdl"
-        android:scaleType="centerCrop"
-        >
-    </ImageView>
-
     <View android:id="@+id/vieSelected"
         android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@drawable/background2"
         app:layout_constraintLeft_toLeftOf="@id/grdl"
         app:layout_constraintTop_toTopOf="@id/grdl"
         app:layout_constraintRight_toRightOf="@id/grdl"
@@ -104,4 +92,5 @@
             ></TextView>
 
     </GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

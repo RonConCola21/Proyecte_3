@@ -15,16 +15,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.jukeapp.R;
+import com.example.jukeapp.databinding.FragmentForgottenPasswordBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class ForgottenPasswordFragment extends Fragment implements View.OnClickListener {
-    private BottomNavigationView bottomNav;
-    private Button btnBack;
-    private Button btnSend;
-    private TextView txvError;
-    private EditText edtEmail;
-    private NavController navController;
+    FragmentForgottenPasswordBinding binding;
+    NavController navController;
+    BottomNavigationView bottomNav;
     public ForgottenPasswordFragment() {
         // Required empty public constructor
     }
@@ -45,27 +43,23 @@ public class ForgottenPasswordFragment extends Fragment implements View.OnClickL
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_forgotten_password, container, false);
-        btnSend = view.findViewById(R.id.btnSend);
-        btnBack = view.findViewById(R.id.btnBack);
-        txvError = view.findViewById(R.id.txvError);
-        edtEmail = view.findViewById(R.id.edtEmail);
+        binding = FragmentForgottenPasswordBinding.inflate(inflater, container, false);
         bottomNav = getActivity().findViewById(R.id.menu_nav);
         bottomNav.setVisibility(View.GONE);
-        btnBack.setOnClickListener(this);
-        btnSend.setOnClickListener(this);
-        return view;
+        binding.btnBack.setOnClickListener(this);
+        binding.btnSend.setOnClickListener(this);
+        return binding.getRoot();
     }
 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.btnSend) {
-            if (edtEmail.getText().toString().isEmpty()) {
-                txvError.setText("Please enter your email address!");
+            if (binding.edtEmail.getText().toString().isEmpty()) {
+                binding.txvError.setText("Please enter your email address!");
             } else
-                txvError.setText("Email sent to " + edtEmail.getText().toString() + "!");
-                btnBack.setVisibility(View.VISIBLE);
-        } else if (view.getId() == R.id.btnBack && btnBack.getVisibility() == View.VISIBLE) {
+                binding.txvError.setText("Email sent to " + binding.edtEmail.getText().toString() + "!");
+                binding.btnBack.setVisibility(View.VISIBLE);
+        } else if (view.getId() == R.id.btnBack && binding.btnBack.getVisibility() == View.VISIBLE) {
             navController = NavHostFragment.findNavController(ForgottenPasswordFragment.this);
             navController.navigate(R.id.action_forgottenPasswordFragment3_to_logInFragment);
         }

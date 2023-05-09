@@ -22,6 +22,10 @@ public class Song implements Parcelable, Serializable {
     private String album;
     public static ArrayList<Song> _songs;
 
+    public static ArrayList<Song> _songs2;
+
+    public static ArrayList<Song> _songs3;
+
     public String getImage() {
         return image;
     }
@@ -137,17 +141,49 @@ public class Song implements Parcelable, Serializable {
     public static List<Song> getSongs(){
         if (_songs==null){
             _songs = new ArrayList<>();
-            _songs.add(new Song("1",1,"1","artist1","artist2","name1",'A',1,"album"));
-            _songs.add(new Song("2",2,"2","artist1","artist2","name2",'A',1,"album"));
-            _songs.add(new Song("3",3,"3","artist1","artist2","name3",'A',1,"album"));
-            _songs.add(new Song("4",4,"4","artist1","artist2","name4",'A',1,"album"));
-            _songs.add(new Song("5",5,"5","artist1","artist2","name5",'A',1,"album"));
-            _songs.add(new Song("6",6,"6","artist1","artist2","name6",'A',1,"album"));
-            _songs.add(new Song("7",7,"7","artist1","artist2","name7",'A',1,"album"));
-            _songs.add(new Song("8",8,"8","artist1","artist2","name8",'A',1,"album"));
-            _songs.add(new Song("9",9,"9","artist1","artist2","name9",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",1,"1","artist1","artist2","name1",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",2,"2","artist1","artist2","name2",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",3,"3","artist1","artist2","name3",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",4,"4","artist1","artist2","name4",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",5,"5","artist1","artist2","name5",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",6,"6","artist1","artist2","name6",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",7,"7","artist1","artist2","name7",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",8,"8","artist1","artist2","name8",'A',1,"album"));
+            _songs.add(new Song("https://rtvc.es/archivos/2023/01/Quevedo-1-1024x1024.jpg",9,"9","artist1","artist2","name9",'A',1,"album"));
         }
         return _songs;
+    }
+
+    public static List<Song> getSongs2(){
+        if (_songs2==null){
+            _songs2 = new ArrayList<>();
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",1,"1","artist21","artist22","name1",'A',1,"album"));
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",2,"2","artist21","artist22","name2",'A',1,"album"));
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",3,"3","artist21","artist22","name3",'A',1,"album"));
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",4,"4","artist21","artist22","name4",'A',1,"album"));
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",5,"5","artist21","artist22","name5",'A',1,"album"));
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",6,"6","artist21","artist22","name6",'A',1,"album"));
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",7,"7","artist21","artist22","name7",'A',1,"album"));
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",8,"8","artist21","artist22","name8",'A',1,"album"));
+            _songs2.add(new Song("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzHtKG8T9ciWkMcyttoEJA00uyyZu2cO8ow&usqp=CAU",9,"9","artist21","artist22","name9",'A',1,"album"));
+        }
+        return _songs2;
+    }
+
+    public static List<Song> getSongs3(){
+        if (_songs3==null){
+            _songs3 = new ArrayList<>();
+            _songs3.add(new Song("31",1,"1","artist31","artist32","name1",'A',1,"album"));
+            _songs3.add(new Song("32",2,"2","artist31","artist32","name2",'A',1,"album"));
+            _songs3.add(new Song("33",3,"3","artist31","artist32","name3",'A',1,"album"));
+            _songs3.add(new Song("34",4,"4","artist31","artist32","name4",'A',1,"album"));
+            _songs3.add(new Song("35",5,"5","artist31","artist32","name5",'A',1,"album"));
+            _songs3.add(new Song("36",6,"6","artist31","artist32","name6",'A',1,"album"));
+            _songs3.add(new Song("37",7,"7","artist31","artist32","name7",'A',1,"album"));
+            _songs3.add(new Song("38",8,"8","artist31","artist32","name8",'A',1,"album"));
+            _songs3.add(new Song("39",9,"9","artist31","artist32","name9",'A',1,"album"));
+        }
+        return _songs3;
     }
 
     @Override

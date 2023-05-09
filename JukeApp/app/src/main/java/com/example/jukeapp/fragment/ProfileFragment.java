@@ -1,5 +1,6 @@
 package com.example.jukeapp.fragment;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,23 +13,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.jukeapp.R;
+import com.example.jukeapp.databinding.FragmentProfileBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class ProfileFragment extends Fragment implements View.OnClickListener {
     private BottomNavigationView bottomNav;
-    private Button btnEdit;
-    private Button btnSave;
-    private Button btnCancel;
-    private EditText edtUser;
-    private EditText edtEmail;
-    private EditText edtPassword;
-    private EditText edtConfirmPassword;
-    private EditText edtNewPassword;
-    private TextView txvPass;
-    private TextView txvConfirmPass;
-    private TextView txvNewPass;
-    private TextView txvError;
+    FragmentProfileBinding binding;
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -53,57 +44,47 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        binding = FragmentProfileBinding.inflate(inflater, container, false);
         bottomNav = getActivity().findViewById(R.id.menu_nav);
         bottomNav.setVisibility(View.VISIBLE);
         //Buttons
-        btnEdit = view.findViewById(R.id.btnEdit);
-        btnSave = view.findViewById(R.id.btnSave);
-        btnCancel = view.findViewById(R.id.btnCancel);
-        btnCancel.setOnClickListener(this);
-        btnSave.setOnClickListener(this);
-        btnEdit.setOnClickListener(this);
+        binding.btnCancel.setOnClickListener(this);
+        binding.btnSave.setOnClickListener(this);
+        binding.btnEdit.setOnClickListener(this);
         //Texts and Edits
-        edtUser = view.findViewById(R.id.edtUser);
-        edtEmail = view.findViewById(R.id.edtEmail);
-        edtPassword = view.findViewById(R.id.edtPass);
-        edtConfirmPassword = view.findViewById(R.id.edtPass2);
-        edtNewPassword = view.findViewById(R.id.edtPass1);
-        txvPass = view.findViewById(R.id.txvPass);
-        txvConfirmPass = view.findViewById(R.id.txvPass2);
-        txvNewPass = view.findViewById(R.id.txvPass1);
-        txvError = view.findViewById(R.id.txvError);
         //Carregar camps
         carregarCamps();
-        return view;
+        return binding.getRoot();
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnEdit:
-                edtPassword.setText("");
+                binding.edtPass.setText("");
                 backToOrigin(true, View.GONE, View.VISIBLE, "Old Password");
                 break;
             case R.id.btnSave:
                 backToOrigin(false, View.VISIBLE, View.GONE, "Password");
                 //guardar valors previ comprovació
-                if (edtUser.getText().toString().equals("")) {
-                    txvError.setText("User can't be empty");
-                } else if (edtEmail.getText().toString().equals("")) {
-                    txvError.setText("Email can't be empty");
+                if (binding.edtUser.getText().toString().equals("")) {
+                    binding.txvError.setText("User can't be empty");
+                } else if (binding.edtEmail.getText().toString().equals("")) {
+                    binding.txvError.setText("Email can't be empty");
                 }
-                if (edtPassword.getText().toString().equals("")){
-                    txvError.setText("Old password doesn't match");
+                if (binding.edtPass.getText().toString().equals("")){
+                    binding. txvError.setText("Old password doesn't match");
                 }
-                if (edtPassword.getText().toString().equals("1234")) {
-                    if (edtNewPassword.getText().toString().equals(edtConfirmPassword.getText().toString())) {
+                if (binding.edtPass.getText().toString().equals("1234")) {
+                    if (binding.edtPass1.getText().toString().equals(binding.edtPass2.getText().toString())) {
                         //guardar valors
                     } else {
-                        txvError.setText("Passwords don't match");
+                        binding.txvError.setText("Passwords don't match");
                     }
                 } else {
-                    txvError.setText("Wrong password");
+                    binding.txvError.setText("Wrong password");
                 }
                 borrarCamps();
                 actulitzarCamps();
@@ -121,36 +102,36 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
 
     private void backToOrigin(boolean enabled, int visible, int gone, String text) {
-        edtUser.setEnabled(enabled);
-        txvPass.setText(text);
-        edtEmail.setEnabled(enabled);
-        edtPassword.setEnabled(enabled);
-        edtConfirmPassword.setEnabled(enabled);
-        edtNewPassword.setEnabled(enabled);
-        txvConfirmPass.setVisibility(gone);
-        txvNewPass.setVisibility(gone);
-        edtNewPassword.setVisibility(gone);
-        edtConfirmPassword.setVisibility(gone);
-        btnEdit.setVisibility(visible);
-        txvError.setVisibility(gone);
-        btnSave.setVisibility(gone);
-        btnCancel.setVisibility(gone);
+        binding.edtUser.setEnabled(enabled);
+        binding.txvPass.setText(text);
+        binding.edtEmail.setEnabled(enabled);
+        binding.edtPass.setEnabled(enabled);
+        binding.edtPass2.setEnabled(enabled);
+        binding.edtPass1.setEnabled(enabled);
+        binding.txvPass1.setVisibility(gone);
+        binding.txvPass2.setVisibility(gone);
+        binding.edtPass1.setVisibility(gone);
+        binding.edtPass2.setVisibility(gone);
+        binding.btnEdit.setVisibility(visible);
+        binding.txvError.setVisibility(gone);
+        binding.btnSave.setVisibility(gone);
+        binding.btnCancel.setVisibility(gone);
     }
 
     private void borrarCamps(){
-        edtUser.setText("");
-        edtEmail.setText("");
-        edtPassword.setText("");
-        edtConfirmPassword.setText("");
-        edtNewPassword.setText("");
-        txvError.setText("");
+        binding.edtUser.setText("");
+        binding.edtEmail.setText("");
+        binding.edtPass.setText("");
+        binding.edtPass2.setText("");
+        binding.edtPass1.setText("");
+        binding.txvError.setText("");
     }
 
     private void carregarCamps(){
         //carregar camps amb valors de l'usuari
-        edtUser.setText("User");
-        edtEmail.setText("Email");
-        edtPassword.setText("1234");
+        binding.edtUser.setText("User");
+        binding.edtEmail.setText("Email");
+        binding.edtPass.setText("1234");
     }
     private void actulitzarCamps() {
     }
