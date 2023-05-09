@@ -1,14 +1,14 @@
 package com.example.myproba.interfaz;
 
-import com.example.myproba.models.posts;
+import com.example.myproba.models.Song;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public interface songApi {
+public interface SongApi {
 
-    @GET("test")
-    Call<posts> getPost();
+    @GET("song")
+    Call<List<Song>> getSongs();
 }

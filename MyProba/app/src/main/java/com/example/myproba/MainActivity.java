@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.myproba.interfaz.songApi;
-import com.example.myproba.models.posts;
+import com.example.myproba.interfaz.SongApi;
+import com.example.myproba.models.Song;
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,29 +33,42 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getPost(){
+        final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .readTimeout(120, TimeUnit.SECONDS)
+                .connectTimeout(120, TimeUnit.SECONDS)
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://10.2.181.69/jukeapp/public/api/")
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
                 .build();
-        songApi songApi = retrofit.create(songApi.class);
-        Call<posts> call = songApi.getPost();
-        call.enqueue(new Callback<posts>() {
+        SongApi songApi = retrofit.create(SongApi.class);
+        Call<List<Song>> call = songApi.getSongs();
+        call.enqueue(new Callback<List<Song>>() {
             @Override
-            public void onResponse(Call<posts> call, Response<posts> response) {
-                if(!response.isSuccessful()){
-                    txtResult.setText("Code: " + response.code());
-                    return;
+            public void onResponse(Call<List<Song>> call, Response<List<Song>> response) {
+                if(response.isSuccessful()){
+                    List<Song> respuesta = response.body();
+                    for (Song song : respuesta){
+                        Log.i("Song_id", Integer.toString(song.getSon_id()));
+                        Log.i("Song_img", song.getSon_img());
+                        Log.i("Song_spotify_id", song.getSon_spotify_id());
+                        Log.i("Song_artist1", song.getSon_artist1());
+                        Log.i("Song_artist2", song.getSon_artist2());
+                        Log.i("Song_name", song.getSon_name());
+                        Log.i("Song_duration", Integer.toString(song.getSon_duration()));
+                        Log.i("Song_status", Integer.toString(song.getSon_status()));
+                    }
+
                 }
-                posts posts = response.body();
-                String content = "";
-                content += "Song ID: " + posts.getSong_id() + "\n";
-                content += "Song Image: " + posts.getSong_img() + "\n";
-                content += "Artist: " + posts.getArtist() + "\n\n";
-                txtResult.setText(content);
+                else {
+                    Log.i("Error", "Error");
+                }
             }
 
             @Override
-            public void onFailure(Call<posts> call, Throwable t) {
+            public void onFailure(Call<List<Song>> call, Throwable t) {
                 Log.i("Error", t.getMessage());
             }
         });
