@@ -87,4 +87,4 @@ insert into petition_queue values (6,3,SYSDATE());
 
 insert into queue values (1,2,sysdate());
 insert into queue values (4,3,sysdate());
-
+COMMIT;
