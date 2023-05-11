@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragmentPlayList"
+        android:icon="@drawable/nav_playlist"
+        android:title="Playback Queue" />
+
+    <item
+        android:id="@+id/fragmentWhiteList"
+        android:icon="@drawable/nav_whitelist"
+        android:title="White List" />
+
+    <item
+        android:id="@+id/fragmentBlackList"
+        android:icon="@drawable/nav_blacklist"
+        android:title="Black List" />
+    <item
+        android:id="@+id/fragmentRequestList"
+        android:icon="@drawable/nav_list"
+        android:title="Request List" />
+</menu>
