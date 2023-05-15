@@ -6,7 +6,7 @@ drop table if exists users;
 drop table if exists song;
 
 create table song(
-    id int AUTO_INCREMENT ,
+    id int AUTO_INCREMENT,
     son_img varchar(100) not null,
     son_spotify_id varchar(80) not null,
    	son_artist1 varchar(80) not null,
@@ -32,16 +32,18 @@ create table users (
 );
 
 create table petition(
-	pet_song_id int AUTO_INCREMENT ,
+	pet_song_id int,
     constraint pk_petition primary key (pet_song_id),
     foreign key fk_petition_song (pet_song_id) references song(id)
 );
 
 create table petition_queue(
+	id int auto_increment,
 	pq_song_id int,
     pq_users_id int,
     pq_moment_temp datetime not null,
-    constraint pk_petition_queue primary key (pq_song_id, pq_users_id),
+    constraint pk_petition_queue primary key (id),
+    constraint unique_petition_queue_song_users unique (pq_song_id,pq_users_id),
     foreign key fk_petition_queue_song (pq_song_id) references petition(pet_song_id),
     foreign key fk_petition_queue_users (pq_users_id) references users(id)
 );
@@ -56,10 +58,12 @@ create table active_token(
 );
 
 create table queue(
+	id int AUTO_INCREMENT,
 	que_song_id int,
     que_users_id int,
     que_moment_temp datetime not null,
-   	primary key (que_moment_temp, que_users_id),
+   	constraint pk_queue primary key (id),
+	constraint unique_queue_users_datetime unique (que_users_id,que_moment_temp),
     foreign key fk_queue_song (que_song_id) references song(id),
     foreign key fk_queue_users (que_users_id) references users(id)
 );
@@ -82,9 +86,9 @@ insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273d1251017
 insert into petition values (3);
 insert into petition values (6);
 
-insert into petition_queue values (3,2,sysdate());
-insert into petition_queue values (6,3,SYSDATE());
+insert into petition_queue values (null,3,2,sysdate());
+insert into petition_queue values (null,6,3,SYSDATE());
 
-insert into queue values (1,2,sysdate());
-insert into queue values (4,3,sysdate());
+insert into queue values (null,1,2,sysdate());
+insert into queue values (null,4,3,sysdate());
 COMMIT;
