@@ -1,4 +1,5 @@
 drop table if exists active_token;
+drop table if exists spotify_token;
 drop table if exists queue;
 drop table if exists petition_queue;
 drop table if exists petition;
@@ -69,6 +70,12 @@ create table queue(
     foreign key fk_queue_users (que_users_id) references users(id)
 );
 
+create table spotify_token(
+	id int AUTO_INCREMENT,
+	st_token varchar(200),
+	st_datetime datetime,
+	constraint pk_spotify_token primary key (id)
+);
 insert into users values (null,'admin','admin@gmail.com', 'admin', 0);
 insert into users values (null,'cferrer1','cferrer1@milaifontanals.org', 'admin', 0);
 insert into users values (null,'mpaez','mpaez@milaifontanals.org', 'admin', 0);
