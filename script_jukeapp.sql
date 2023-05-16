@@ -32,8 +32,9 @@ create table users (
 );
 
 create table petition(
+	id int auto_increment,
 	pet_song_id int,
-    constraint pk_petition primary key (pet_song_id),
+    constraint pk_petition primary key (id),
     foreign key fk_petition_song (pet_song_id) references song(id)
 );
 
@@ -83,8 +84,8 @@ insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b2737cc7b0d6
 insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273d12510170b4c55664e96e9a5', '4DuUwzP4ALMqpquHU0ltAB', 'Jack Harlow', null, 'Single', 'Tyler Herro', 157, 'b');
 insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273d12510170b4c55664e96e9a5', '3kUq4sBcmxhnOtNysZ9yrp', 'Feid', null, 'Single', 'Feliz Cumpleaños Ferxo', 156, 'p');
 
-insert into petition values (3);
-insert into petition values (6);
+insert into petition values (null,3);
+insert into petition values (null,6);
 
 insert into petition_queue values (null,3,2,sysdate());
 insert into petition_queue values (null,6,3,SYSDATE());
