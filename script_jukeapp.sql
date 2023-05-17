@@ -71,7 +71,7 @@ create table queue(
 );
 
 create table spotify_token(
-	id int AUTO_INCREMENT,
+	id int default 1,
 	st_token varchar(200),
 	st_datetime datetime,
 	constraint pk_spotify_token primary key (id)
