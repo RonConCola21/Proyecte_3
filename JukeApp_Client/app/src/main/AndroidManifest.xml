@@ -9,6 +9,7 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.JukeApp"
         tools:targetApi="31">
         <activity

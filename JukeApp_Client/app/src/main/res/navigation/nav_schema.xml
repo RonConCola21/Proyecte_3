@@ -6,7 +6,7 @@
     app:startDestination="@id/logInFragment">
     <fragment
         android:id="@+id/logInFragment"
-        android:name="com.example.jukeapp.fragment.LogInFragment"
+        android:name="com.example.jukeapp.fragment.LogIn.LogInFragment"
         android:label="LogInFragment" >
         <action
             android:id="@+id/action_logInFragment_to_signInFragment"
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.jukeapp.fragment.SignInFragment"
+        android:name="com.example.jukeapp.fragment.SignIn.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/whitelistFragment"
-        android:name="com.example.jukeapp.fragment.WhitelistFragment"
+        android:name="com.example.jukeapp.fragment.Whitelist.WhitelistFragment"
         android:label="fragment_whitelist"
         tools:layout="@layout/fragment_whitelist" >
         <action
@@ -54,12 +54,12 @@
     </fragment>
     <fragment
         android:id="@+id/QRFragment"
-        android:name="com.example.jukeapp.fragment.QRFragment"
+        android:name="com.example.jukeapp.fragment.QR.QRFragment"
         android:label="fragment_q_r"
         tools:layout="@layout/fragment_q_r" />
     <fragment
         android:id="@+id/newSongFragment"
-        android:name="com.example.jukeapp.fragment.NewSongFragment"
+        android:name="com.example.jukeapp.fragment.NewSong.NewSongFragment"
         android:label="fragment_new_song"
         tools:layout="@layout/fragment_new_song" >
         <action
@@ -75,7 +75,7 @@
         tools:layout="@layout/fragment_profile" /><action android:id="@+id/action_global_profileFragment" app:destination="@id/profileFragment"/>
     <fragment
         android:id="@+id/playbackQueueFragment"
-        android:name="com.example.jukeapp.fragment.PlaybackQueueFragment"
+        android:name="com.example.jukeapp.fragment.PlaybackQueue.PlaybackQueueFragment"
         android:label="fragment_playback_queue"
         tools:layout="@layout/fragment_playback_queue" />
     <action android:id="@+id/action_global_playbackQueueFragment" app:destination="@id/playbackQueueFragment" />

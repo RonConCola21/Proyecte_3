@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.jukeapp.R;
-import com.example.jukeapp.models.Song;
+import com.example.jukeapp.api.Song;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -41,12 +41,13 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull SongAdapter.ViewHolder holder, int position) {
         Song s = mSongs.get(position);
-        holder.txvName.setText(s.getName());
-        holder.txvArtist1.setText(s.getArtist1());
-        holder.txvArtist2.setText(s.getArtist2());
-        holder.txvDuration.setText(s.getDuration()+"");
-        holder.txvAlbum.setText(s.getAlbum());
-        Picasso.get().load(s.getImage()).into(holder.imvImage);
+        holder.txvName.setText(s.getSonName());
+        holder.txvArtist1.setText(s.getSonArtist1());
+        holder.txvArtist2.setText(s.getSonArtist2());
+        String duracio = s.getSonDuration()/60 + ":" + s.getSonDuration()%60;
+        holder.txvDuration.setText(duracio);
+        holder.txvAlbum.setText(s.getSonAlbum());
+        Picasso.get().load(s.getSonImg()).into(holder.imvImage);
     }
 
     @Override

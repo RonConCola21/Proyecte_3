@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Usuari o correu electrònic"
+            android:text="Usuari"
             android:textStyle="bold"
             android:textSize="20dp"
             android:id="@+id/txvUser"
@@ -44,7 +44,7 @@
             android:textSize="20dp"
             android:layout_row="1"
             android:layout_column="0"
-            android:hint="email123@mycompany.com"/>
+            android:hint="emili123"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,17 +63,6 @@
             android:layout_column="0"
             android:hint="12345678"
             android:inputType="textPassword"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hola"
-            android:id="@+id/txvError"
-
-            android:layout_row="4"
-            android:layout_column="0"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            />
     </GridLayout>
     <Button
         android:layout_width="wrap_content"
