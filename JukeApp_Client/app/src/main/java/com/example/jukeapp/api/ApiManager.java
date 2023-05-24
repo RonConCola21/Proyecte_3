@@ -2,11 +2,14 @@ package com.example.jukeapp.api;
 
 import android.util.Log;
 
+import com.google.gson.JsonElement;
+
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -49,6 +52,16 @@ public class ApiManager {
 
     public void searchSong(String song_name, Callback <WSGetSongs> callback) {
         Call<WSGetSongs> call = mSongApi.searchSong(song_name);
+        call.enqueue(callback);
+    }
+
+    public void getUser(String user_nick, String user_password, Callback <GetUserSuccess> callback) {
+        Call<GetUserSuccess> call = mSongApi.getUser(user_nick, user_password);
+        call.enqueue(callback);
+    }
+
+    public void createUser(String user_nick, String user_email, String user_password, Callback <WSCreateUser> callback) {
+        Call<WSCreateUser> call = mSongApi.createUser(user_nick, user_email, user_password);
         call.enqueue(callback);
     }
 }

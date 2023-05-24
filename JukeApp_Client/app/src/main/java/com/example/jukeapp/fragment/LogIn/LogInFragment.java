@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -12,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jukeapp.R;
+import com.example.jukeapp.api.GetUserSuccess;
 import com.example.jukeapp.databinding.FragmentLogInBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,6 +23,7 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
     private BottomNavigationView bottomNav;
 
     FragmentLogInBinding binding;
+    LogInViewModel viewModel;
 
     private NavController navController;
     public LogInFragment() {
@@ -49,6 +53,7 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
         binding.btnLogin.setOnClickListener(this);
         binding.btnSignin.setOnClickListener(this);
         binding.btnForgottenPassword.setOnClickListener(this);
+        viewModel = new ViewModelProvider(this).get(LogInViewModel.class);
         return binding.getRoot();
     }
 
@@ -64,10 +69,30 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
                     builder.setMessage("Tots els camps són obligatoris");
                     builder.create().show();
                 }else{
-                    binding.edtUser.setText("");
-                    binding.edtPassword.setText("");
-                    navController = NavHostFragment.findNavController(LogInFragment.this);
-                    navController.navigate(R.id.action_logInFragment_to_whitelistFragment);
+                    binding.progressBar.setVisibility(View.VISIBLE);
+                    viewModel.mUser.observe(getViewLifecycleOwner( ), new Observer<GetUserSuccess>( ) {
+                        boolean loaded = false;
+                        @Override
+                        public void onChanged(GetUserSuccess getUserSuccess) {
+                            if (getUserSuccess != null){
+                                if (getUserSuccess.getUserId() != null){
+                                    navController = NavHostFragment.findNavController(LogInFragment.this);
+                                    navController.navigate(R.id.action_logInFragment_to_whitelistFragment);
+                                }
+                            }else{
+                                binding.progressBar.setVisibility(View.GONE);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                                builder.setTitle("Error");
+                                builder.setMessage("Usuari o contrasenya incorrectes");
+                                builder.create().show();
+                            }
+
+                        }
+
+                    });
+                    viewModel.getUser(email, password);
+//                    navController = NavHostFragment.findNavController(LogInFragment.this);
+//                    navController.navigate(R.id.action_logInFragment_to_whitelistFragment);
                 }
                 break;
             case R.id.btnSignin:

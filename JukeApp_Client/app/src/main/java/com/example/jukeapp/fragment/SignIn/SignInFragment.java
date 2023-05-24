@@ -4,14 +4,18 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jukeapp.R;
+import com.example.jukeapp.api.WSCreateUser;
 import com.example.jukeapp.databinding.FragmentSignInBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -19,6 +23,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
     private BottomNavigationView bottomNav;
     FragmentSignInBinding binding;
     NavController navController;
+    SignInViewModel viewModel;
     public SignInFragment() {
         // Required empty public constructor
     }
@@ -43,6 +48,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
         bottomNav.setVisibility(View.GONE);
         binding.btnSignin.setOnClickListener(this);
         binding.btnLogin.setOnClickListener(this);
+        viewModel = new ViewModelProvider(this).get(SignInViewModel.class);
         return binding.getRoot();
     }
 
@@ -68,8 +74,25 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
                     builder.create().show();
                     break;
                 }
-                navController = NavHostFragment.findNavController(SignInFragment.this);
-                navController.navigate(R.id.action_signInFragment_to_whitelistFragment);
+
+                viewModel.mUser.observe(getViewLifecycleOwner( ), new Observer<WSCreateUser>( ) {
+                    @Override
+                    public void onChanged(WSCreateUser wsCreateUser) {
+                        Log.d("TAG", "Valor success: " + wsCreateUser.getSuccess());
+                        if (wsCreateUser.getSuccess().equals("ok")){
+                            navController = NavHostFragment.findNavController(SignInFragment.this);
+                            navController.navigate(R.id.action_signInFragment_to_whitelistFragment);
+                        }
+                        else {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                            builder.setTitle("Error");
+                            builder.setMessage("Error al crear l'usuari");
+                            builder.create().show();
+                        }
+                    }
+                });
+                viewModel.createUser(binding.edtUser.getText().toString(), binding.edtEmail.getText().toString(), binding.edtPassword.getText().toString());
+
                 break;
         }
     }
