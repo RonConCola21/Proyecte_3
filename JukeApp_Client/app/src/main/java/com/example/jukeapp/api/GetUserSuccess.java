@@ -1,8 +1,11 @@
 package com.example.jukeapp.api;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.gson.JsonElement;
@@ -16,7 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class GetUserSuccess {
+public class GetUserSuccess implements Parcelable {
 
     @SerializedName("user_id")
     @Expose
@@ -72,5 +75,15 @@ public class GetUserSuccess {
                 Log.d("Error", t.getMessage());
             }
         });
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+
     }
 }

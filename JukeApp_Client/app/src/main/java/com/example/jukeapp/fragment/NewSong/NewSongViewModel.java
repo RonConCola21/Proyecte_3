@@ -11,6 +11,6 @@ public class NewSongViewModel extends ViewModel {
     public MutableLiveData<List<Song>> mSongs = new MutableLiveData<>();
 
     public void searchSongs(String text) {
-        Song.searchSong(mSongs,text);
+        Song.searchSong(mSongs, text);
     }
 }

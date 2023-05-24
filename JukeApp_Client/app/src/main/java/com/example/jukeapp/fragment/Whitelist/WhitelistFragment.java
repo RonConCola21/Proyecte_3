@@ -14,35 +14,51 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jukeapp.R;
 import com.example.jukeapp.adapter.SongAdapter;
+import com.example.jukeapp.api.GetUserSuccess;
 import com.example.jukeapp.databinding.FragmentWhitelistBinding;
 import com.example.jukeapp.api.Song;
+import com.example.jukeapp.fragment.LogIn.LogInFragment;
+import com.example.jukeapp.fragment.NewSong.NewSongFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WhitelistFragment extends Fragment implements SongAdapter.SongSelectedListener {
+public class WhitelistFragment extends Fragment implements SongAdapter.SongSelectedListener  {
     private BottomNavigationView bottomNav;
     private FragmentWhitelistBinding binding;
     private SongAdapter adapter;
     private WhitelistViweModel viewModel;
     private NavController navController;
+    public GetUserSuccess user;
 
-    public WhitelistFragment() {
-        // Required empty public constructor
+    public static final String USER = "user";
+
+    public static WhitelistFragment newInstance(GetUserSuccess user) {
+        WhitelistFragment fragment = new WhitelistFragment();
+        Bundle args = new Bundle();
+        args.putParcelable(USER, user);
+        fragment.setArguments(args);
+        return fragment;
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
+            user = getArguments().getParcelable(USER);
         }
+
+        Log.i("Valor id_user", "El valor de id user es: " + user.getUserId());
     }
 
     @Override
@@ -68,7 +84,9 @@ public class WhitelistFragment extends Fragment implements SongAdapter.SongSelec
                     @Override
                     public void onClick(View view) {
                         navController = NavHostFragment.findNavController(WhitelistFragment.this);
-                        navController.navigate(R.id.action_whitelistFragment_to_newSongFragment);
+                        Bundle args = new Bundle();
+                        args.putParcelable(NewSongFragment.USER, user);
+                        navController.navigate(R.id.action_whitelistFragment_to_newSongFragment, args);
                     }
                 });
                 binding.btnSearch.setOnClickListener(new View.OnClickListener() {

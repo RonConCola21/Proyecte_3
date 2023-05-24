@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import android.view.ViewGroup;
 import com.example.jukeapp.R;
 import com.example.jukeapp.api.GetUserSuccess;
 import com.example.jukeapp.databinding.FragmentLogInBinding;
+import com.example.jukeapp.fragment.Whitelist.WhitelistFragment;
+import com.example.jukeapp.hash.SHA1Utils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -62,7 +65,9 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
         switch (view.getId()){
             case R.id.btnLogin:
                 String email = binding.edtUser.getText().toString();
-                String password = binding.edtPassword.getText().toString();
+                String password = SHA1Utils.convertirSHA1(binding.edtPassword.getText().toString()).toUpperCase();
+
+                Log.i("Info user", email + ": " + password);
                 if (email.isEmpty() || password.isEmpty()){
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                     builder.setTitle("Error");
@@ -71,13 +76,14 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
                 }else{
                     binding.progressBar.setVisibility(View.VISIBLE);
                     viewModel.mUser.observe(getViewLifecycleOwner( ), new Observer<GetUserSuccess>( ) {
-                        boolean loaded = false;
                         @Override
                         public void onChanged(GetUserSuccess getUserSuccess) {
                             if (getUserSuccess != null){
                                 if (getUserSuccess.getUserId() != null){
                                     navController = NavHostFragment.findNavController(LogInFragment.this);
-                                    navController.navigate(R.id.action_logInFragment_to_whitelistFragment);
+                                    Bundle args = new Bundle();
+                                    args.putParcelable(WhitelistFragment.USER, getUserSuccess);
+                                    navController.navigate(R.id.action_logInFragment_to_whitelistFragment, args);
                                 }
                             }else{
                                 binding.progressBar.setVisibility(View.GONE);

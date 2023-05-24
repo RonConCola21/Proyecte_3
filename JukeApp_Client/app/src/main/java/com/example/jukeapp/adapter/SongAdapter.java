@@ -44,7 +44,8 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
         holder.txvName.setText(s.getSonName());
         holder.txvArtist1.setText(s.getSonArtist1());
         holder.txvArtist2.setText(s.getSonArtist2());
-        String duracio = s.getSonDuration()/60 + ":" + s.getSonDuration()%60;
+        int result = (int) Math.floor(s.getSonDuration());
+        String duracio = result/60 + ":" + result%60;
         holder.txvDuration.setText(duracio);
         holder.txvAlbum.setText(s.getSonAlbum());
         Picasso.get().load(s.getSonImg()).into(holder.imvImage);

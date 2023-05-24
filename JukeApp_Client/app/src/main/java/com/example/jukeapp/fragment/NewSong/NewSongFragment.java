@@ -12,6 +12,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import android.view.ViewGroup;
 import com.example.jukeapp.R;
 import com.example.jukeapp.adapter.SongAdapter;
 import com.example.jukeapp.api.ApiManager;
+import com.example.jukeapp.api.GetUserSuccess;
 import com.example.jukeapp.api.SongApi;
 import com.example.jukeapp.databinding.FragmentNewSongBinding;
 import com.example.jukeapp.api.Song;
@@ -34,14 +36,15 @@ public class NewSongFragment extends Fragment implements View.OnClickListener, S
     private SongAdapter adapter;
 
     private NewSongViewModel viewModel;
-    public NewSongFragment() {
-        // Required empty public constructor
-    }
+
+    public static final String USER = "user";
+    private GetUserSuccess user;
 
 
-    public static NewSongFragment newInstance(String param1, String param2) {
+    public static NewSongFragment newInstance(GetUserSuccess user) {
         NewSongFragment fragment = new NewSongFragment();
         Bundle args = new Bundle();
+        args.putParcelable(USER, user);
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,9 +52,10 @@ public class NewSongFragment extends Fragment implements View.OnClickListener, S
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-
+        if (getArguments() != null){
+            user = getArguments().getParcelable(USER);
         }
+        Log.i("Valor id_user", "El valor de id user es: " + user.getUserId());
     }
 
     @Override
@@ -62,6 +66,7 @@ public class NewSongFragment extends Fragment implements View.OnClickListener, S
         binding.btnCancel.setOnClickListener(this);
         binding.btnSearch.setOnClickListener(this);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+        viewModel = new ViewModelProvider(this).get(NewSongViewModel.class);
         return binding.getRoot();
     }
 
@@ -69,11 +74,12 @@ public class NewSongFragment extends Fragment implements View.OnClickListener, S
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnCancel:
+                Bundle args = new Bundle();
+                args.putParcelable(NewSongFragment.USER, user);
                 navController = NavHostFragment.findNavController(NewSongFragment.this);
-                navController.navigate(R.id.action_newSongFragment_to_whitelistFragment);
+                navController.navigate(R.id.action_newSongFragment_to_whitelistFragment, args);
                 break;
             case R.id.btnSearch:
-                ArrayList<Song> song = new ArrayList<>();
                 String text = binding.edtSearch.getText().toString();
                 if (text.equals("")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
@@ -83,7 +89,6 @@ public class NewSongFragment extends Fragment implements View.OnClickListener, S
                 } else {
                     binding.pgrdownload.setVisibility(View.VISIBLE);
                     //buscar canóns a Spotify, no les locals
-                    viewModel = new ViewModelProvider(this).get(NewSongViewModel.class);
                     viewModel.mSongs.observe(getViewLifecycleOwner(), new Observer<List<Song>>() {
                         @Override
                         public void onChanged(List<Song> songs) {

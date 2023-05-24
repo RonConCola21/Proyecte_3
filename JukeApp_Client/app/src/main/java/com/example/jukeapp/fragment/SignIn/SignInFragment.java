@@ -15,8 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jukeapp.R;
-import com.example.jukeapp.api.WSCreateUser;
+import com.example.jukeapp.api.WSCreate;
 import com.example.jukeapp.databinding.FragmentSignInBinding;
+import com.example.jukeapp.hash.SHA1Utils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SignInFragment extends Fragment implements View.OnClickListener {
@@ -75,11 +76,11 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
                     break;
                 }
 
-                viewModel.mUser.observe(getViewLifecycleOwner( ), new Observer<WSCreateUser>( ) {
+                viewModel.mUser.observe(getViewLifecycleOwner( ), new Observer<WSCreate>( ) {
                     @Override
-                    public void onChanged(WSCreateUser wsCreateUser) {
-                        Log.d("TAG", "Valor success: " + wsCreateUser.getSuccess());
-                        if (wsCreateUser.getSuccess().equals("ok")){
+                    public void onChanged(WSCreate wsCreate) {
+                        Log.d("TAG", "Valor success: " + wsCreate.getSuccess());
+                        if (wsCreate.getSuccess().equals("ok")){
                             navController = NavHostFragment.findNavController(SignInFragment.this);
                             navController.navigate(R.id.action_signInFragment_to_whitelistFragment);
                         }
@@ -91,7 +92,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
                         }
                     }
                 });
-                viewModel.createUser(binding.edtUser.getText().toString(), binding.edtEmail.getText().toString(), binding.edtPassword.getText().toString());
+                viewModel.createUser(binding.edtUser.getText().toString(), binding.edtEmail.getText().toString(), SHA1Utils.convertirSHA1(binding.edtPassword.getText().toString()).toUpperCase());
 
                 break;
         }

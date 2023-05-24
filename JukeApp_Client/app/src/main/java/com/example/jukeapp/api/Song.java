@@ -37,7 +37,7 @@ public class Song {
     private String sonName;
     @SerializedName("son_duration")
     @Expose
-    private Integer sonDuration;
+    private Double sonDuration;
     @SerializedName("son_status")
     @Expose
     private String sonStatus;
@@ -94,11 +94,11 @@ public class Song {
         this.sonName = sonName;
     }
 
-    public Integer getSonDuration() {
+    public Double getSonDuration() {
         return sonDuration;
     }
 
-    public void setSonDuration(Integer sonDuration) {
+    public void setSonDuration(Double sonDuration) {
         this.sonDuration = sonDuration;
     }
 
@@ -152,32 +152,23 @@ public class Song {
         });
     }
 
-    public static void searchSong(MutableLiveData<List<Song>> mSongs,String songName){
+    public static void searchSong(MutableLiveData<List<Song>> mSongs, String songName){
         ApiManager.getInstance().searchSong(songName, new Callback<WSGetSongs>() {
             @Override
             public void onResponse(Call<WSGetSongs> call, Response<WSGetSongs> response) {
                 if (response.isSuccessful()) {
                     WSGetSongs wsGetSongs = response.body();
                     List<Song> songs = wsGetSongs.getData();
+                    Log.i("Response searchSong", "onResponse: " + songs);
                     mSongs.postValue(songs);
                 }
             }
 
             @Override
             public void onFailure(Call<WSGetSongs> call, Throwable t) {
-                Log.d("Error", t.getMessage());
+                Log.d("Error searchSong", t.getMessage());
             }
         });
-    }
-
-    public static View.OnClickListener mandarBlackList(){
-        View.OnClickListener result = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i("ProbaBlackList", "Hola Juan Carlos");
-            }
-        };
-        return result;
     }
 
 

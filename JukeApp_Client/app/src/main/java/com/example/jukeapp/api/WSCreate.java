@@ -4,8 +4,6 @@ import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -13,7 +11,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class WSCreateUser {
+public class WSCreate {
 
     @SerializedName("success")
     @Expose
@@ -27,22 +25,23 @@ public class WSCreateUser {
         this.success = success;
     }
 
-    public static void createUser(String user_nick, String user_email, String user_password, MutableLiveData<WSCreateUser> mUser){
-        ApiManager.getInstance().createUser(user_nick, user_email, user_password, new Callback<WSCreateUser>() {
+    public static void createUser(String user_nick, String user_email, String user_password, MutableLiveData<WSCreate> mUser){
+        ApiManager.getInstance().createUser(user_nick, user_email, user_password, new Callback<WSCreate>() {
             @Override
-            public void onResponse(Call<WSCreateUser> call, Response<WSCreateUser> response) {
+            public void onResponse(Call<WSCreate> call, Response<WSCreate> response) {
                 if (response.isSuccessful()) {
                     Log.d("Success", "Usuario creado");
-                    WSCreateUser wsCreateUser = response.body();
-                    mUser.postValue(wsCreateUser);
+                    WSCreate wsCreate = response.body();
+                    mUser.postValue(wsCreate);
                 }
             }
 
             @Override
-            public void onFailure(Call<WSCreateUser> call, Throwable t) {
+            public void onFailure(Call<WSCreate> call, Throwable t) {
                 Log.d("Error", t.getMessage());
             }
         });
     }
+
 
 }
