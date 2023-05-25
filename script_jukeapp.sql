@@ -74,6 +74,7 @@ create table spotify_token(
 	id int default 1,
 	st_token varchar(1000),
 	st_refresh_token varchar(200),
+	st_device varchar(200),
 	st_datetime datetime,
 	constraint pk_spotify_token primary key (id)
 );
@@ -91,6 +92,9 @@ insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273ed132404
 insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b2737cc7b0d6a82846cd8b158f99', '0CYTGMBYkwUxrj1MWDLrC5', 'Feid', null, 'Single', 'Chorrito Pa Las Ánimas', 168, 'w');
 insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273d12510170b4c55664e96e9a5', '4DuUwzP4ALMqpquHU0ltAB', 'Jack Harlow', null, 'Single', 'Tyler Herro', 157, 'b');
 insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273d12510170b4c55664e96e9a5', '3kUq4sBcmxhnOtNysZ9yrp', 'Feid', null, 'Single', 'Feliz Cumpleaños Ferxo', 156, 'p');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b2731fcf8dc413896f0fb5749141', '44FzVABpR2cciquTqADA0D', 'Young Miko', null, 'Lisa', 'Lisa', 159, 'w');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b2734d42173bae92f075c0c5f5bb', '13FHy6nHjXHbzHj1dZFB1G', 'Young Miko', null, 'Riri', 'TRAP KITTY', 134, 'w');
+insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b273f47ea380d5e2c65565d8ade2', '1eG68fWLXO7IphzE4GOeJf', 'Hozwal', 'Young Miko', 'Big Booty', 'Sempiterno', 180, 'w');
 
 insert into petition values (null,3);
 insert into petition values (null,6);

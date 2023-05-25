@@ -5,18 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Queue extends Model
+class SpotifyToken extends Model
 {
     use HasFactory;
 
-    public $table = "queue";
+    public $table = "spotify_token";
 
     public $timestamps = false;
 
     protected $fillable = [
         'id',
-        'que_song_id',
-        'que_users_id',
-        'que_moment_temp',
+        'st_token',
+        'st_datetime',
+        'st_device',
+        'st_refresh-token'
     ];
 }
+

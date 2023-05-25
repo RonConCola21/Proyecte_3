@@ -18,7 +18,8 @@
             <RowDefinition Height="5*"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Image x:Name="QrImage" Width="500" Height="500" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Source="/Assets/QR_Generator.png"/>
+        <WebView x:Name="webview" Grid.Column="0" Grid.Row="0"/>
+        <TextBlock x:Name="txbLong" Grid.Column="0" Grid.Row="1"/>
         <TextBlock Text="Generar Qr" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" FontSize="100" TextAlignment="Center"/>
         <Button HorizontalAlignment="Center" Content="Generar" x:Name="Generar" Click="Generar_Click" Background="Aqua" Grid.Column="1" Grid.Row="1"/>
     </Grid>
