@@ -31,6 +31,28 @@ public class GetUserSuccess implements Parcelable {
     @Expose
     private int tokens;
 
+    protected GetUserSuccess(Parcel in) {
+        if (in.readByte( ) == 0) {
+            userId = null;
+        } else {
+            userId = in.readInt( );
+        }
+        success = in.readString( );
+        tokens = in.readInt( );
+    }
+
+    public static final Creator<GetUserSuccess> CREATOR = new Creator<GetUserSuccess>( ) {
+        @Override
+        public GetUserSuccess createFromParcel(Parcel in) {
+            return new GetUserSuccess(in);
+        }
+
+        @Override
+        public GetUserSuccess[] newArray(int size) {
+            return new GetUserSuccess[size];
+        }
+    };
+
     public Integer getUserId() {
         return userId;
     }
@@ -84,6 +106,31 @@ public class GetUserSuccess implements Parcelable {
 
     @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
+        if (userId == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeInt(userId);
+        }
+        dest.writeString(success);
+        dest.writeInt(tokens);
+    }
 
+    public static void createUser(String user_nick, String user_email, String user_password, MutableLiveData<GetUserSuccess> mUser){
+        ApiManager.getInstance().createUser(user_nick, user_email, user_password, new Callback<GetUserSuccess>() {
+            @Override
+            public void onResponse(Call<GetUserSuccess> call, Response<GetUserSuccess> response) {
+                if (response.isSuccessful()) {
+                    Log.d("Success", "Usuario creado");
+                    GetUserSuccess getUserSuccess = response.body();
+                    mUser.postValue(getUserSuccess);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetUserSuccess> call, Throwable t) {
+                Log.d("Error", t.getMessage());
+            }
+        });
     }
 }
