@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-05-22T21:25:05.087</Modified>
+      <Modified>2023-05-25T10:57:33.380</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\QrGenerator.exe">
       <PackagePath>entrypoint\QrGenerator.exe</PackagePath>
-      <Modified>2023-05-22T21:25:00.675</Modified>
+      <Modified>2023-05-25T10:57:31.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\isard\.nuget\packages\barcode\2023.4.1\runtimes\win-x64\native\IronPdfInterop.dll">
       <PackagePath>IronPdfInterop.dll</PackagePath>
@@ -158,6 +158,10 @@
       <PackagePath>BouncyCastle.Crypto.dll</PackagePath>
       <Modified>2021-10-19T11:53:34.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\isard\.nuget\packages\qrcoder\1.4.3\lib\netstandard2.0\QRCoder.dll">
+      <PackagePath>QRCoder.dll</PackagePath>
+      <Modified>2021-12-12T12:30:52.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2022-06-10T20:23:28.000</Modified>
@@ -177,6 +181,10 @@
     <AppxPackagedFile Include="C:\Users\isard\.nuget\packages\system.diagnostics.diagnosticsource\4.7.1\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
       <Modified>2020-04-14T22:48:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\isard\.nuget\packages\system.drawing.common\5.0.3\lib\netstandard2.0\System.Drawing.Common.dll">
+      <PackagePath>System.Drawing.Common.dll</PackagePath>
+      <Modified>2021-01-19T20:29:18.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\isard\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
@@ -200,7 +208,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\BdLib\bin\x64\Debug\BdLib.dll">
       <PackagePath>BdLib.dll</PackagePath>
-      <Modified>2023-05-22T14:47:47.902</Modified>
+      <Modified>2023-05-25T10:31:42.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -250,15 +258,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\QrGenerator.xr.xml">
       <PackagePath>QrGenerator.xr.xml</PackagePath>
-      <Modified>2023-05-22T21:24:59.306</Modified>
+      <Modified>2023-05-25T10:56:19.754</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-05-22T21:24:59.358</Modified>
+      <Modified>2023-05-25T10:57:30.865</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-05-22T21:24:59.358</Modified>
+      <Modified>2023-05-25T10:57:30.866</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -266,11 +274,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-05-22T21:25:03.662</Modified>
+      <Modified>2023-05-25T10:00:32.020</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\Core\QrGenerator.exe">
       <PackagePath>QrGenerator.exe</PackagePath>
-      <Modified>2023-05-22T21:25:05.070</Modified>
+      <Modified>2023-05-25T10:57:33.361</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

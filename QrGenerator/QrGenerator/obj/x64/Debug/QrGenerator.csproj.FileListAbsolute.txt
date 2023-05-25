@@ -139,3 +139,6 @@ C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\obj\x64\Debug
 C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
 C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\zxing.dll
 C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\obj\x64\Debug\zxing.pri.xml
+C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\QRCoder.dll
+C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\bin\x64\Debug\System.Drawing.Common.dll
+C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\obj\x64\Debug\FxResources.System.Drawing.Common.SR.resw

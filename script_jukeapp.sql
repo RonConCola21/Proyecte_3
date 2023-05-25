@@ -12,7 +12,7 @@ create table song(
     son_spotify_id varchar(80) not null,
    	son_artist1 varchar(80) not null,
     son_artist2 varchar(80),
-	son_album varchar(40) not null,
+	son_album varchar(80) not null,
    	son_name varchar(80) not null,
     son_duration int not null,
    	son_status char not null,
