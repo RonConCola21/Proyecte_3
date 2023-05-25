@@ -40,7 +40,7 @@ public class Song {
     private String sonName;
     @SerializedName("son_duration")
     @Expose
-    private Integer sonDuration;
+    private Double sonDuration;
     @SerializedName("son_status")
     @Expose
     private String sonStatus;
@@ -101,11 +101,11 @@ public class Song {
         this.sonName = sonName;
     }
 
-    public Integer getSonDuration() {
+    public Double getSonDuration() {
         return sonDuration;
     }
 
-    public void setSonDuration(Integer sonDuration) {
+    public void setSonDuration(Double sonDuration) {
         this.sonDuration = sonDuration;
     }
 
@@ -158,6 +158,7 @@ public class Song {
                 if (response.isSuccessful()) {
                     WSGetSongs wsGetSongs = response.body();
                     List<Song> songs = wsGetSongs.getData();
+                    songs.remove(0);
                     mSongs.postValue(songs);
                 }
             }
@@ -165,6 +166,25 @@ public class Song {
             @Override
             public void onFailure(Call<WSGetSongs> call, Throwable t) {
                 Log.d("Error", t.getMessage());
+            }
+        });
+    }
+
+    public static void getCurrentlyPlayingSong(MutableLiveData<Song> mSong){
+        ApiManager.getInstance().getQueue(new Callback<WSGetSongs>( ) {
+            @Override
+            public void onResponse(Call<WSGetSongs> call, Response<WSGetSongs> response) {
+                if (response.isSuccessful()) {
+                    WSGetSongs wsGetSongs = response.body();
+                    List<Song> songs = wsGetSongs.getData();
+                    mSong.postValue(songs.get(0));
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<WSGetSongs> call, Throwable t) {
+                Log.d("Error getCurrentlyPlayingSong", t.getMessage());
             }
         });
     }

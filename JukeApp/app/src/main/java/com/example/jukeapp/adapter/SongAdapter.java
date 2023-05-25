@@ -57,14 +57,15 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder>{
         Song s = mSongs.get(position);
         holder.txtSongTitle.setText(s.getSonName());
         if (s.getSonArtist2() != null){
-            holder.txtSongArtists.setText(s.getSonArtist1() + " " + s.getSonArtist2());
+            holder.txtSongArtists.setText(s.getSonArtist1() + ", " + s.getSonArtist2());
         }
         else {
             holder.txtSongArtists.setText(s.getSonArtist1());
         }
         holder.txtSongAlbum.setText(s.getSonAlbum());
-        int min = s.getSonDuration() / 60;
-        int sec = s.getSonDuration() % 60;
+        int dur = (int) Math.floor(s.getSonDuration());
+        int min = dur / 60;
+        int sec = dur % 60;
         holder.txtSongDuration.setText(Integer.toString(min) + ":" + Integer.toString(sec));
         Picasso.get().load(s.getSonImg()).into(holder.imgCover);
         if (mPosItemSeleccionat == position) {

@@ -16,4 +16,13 @@ public interface SongApi {
 
     @GET("getQueue")
     Call<WSGetSongs> getQueue();
+
+    @POST("skipNext")
+    Call<WSSuccess> skipNext();
+
+    @POST("skipPrevious")
+    Call<WSSuccess> skipPrevious();
+
+    @GET("getCurrentlyPlayingSong")
+    Call<WSGetSongs> getCurrentlyPlayingSong();
 }

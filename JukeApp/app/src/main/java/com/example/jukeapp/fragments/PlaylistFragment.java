@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,8 +18,10 @@ import com.example.jukeapp.R;
 import com.example.jukeapp.adapter.SongAdapter;
 import com.example.jukeapp.databinding.FragmentPlaylistBinding;
 import com.example.jukeapp.fragments.api.Song;
+import com.example.jukeapp.fragments.api.WSSuccess;
 import com.example.jukeapp.viewmodels.PlaylistViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -85,19 +88,70 @@ public class PlaylistFragment extends Fragment {
 
         viewModel = new ViewModelProvider(this).get(PlaylistViewModel.class);
 
-        viewModel.mSongs.observe(getViewLifecycleOwner(), new Observer<List<Song>>() {
+        viewModel.mSongs.observe(getViewLifecycleOwner(), observerSongs());
+        viewModel.getQueue();
 
+        viewModel.mActualSong.observe(getViewLifecycleOwner(), observerActual());
+        viewModel.getActualSong();
+
+        binding.btnNext.setOnClickListener(new View.OnClickListener( ) {
+            @Override
+            public void onClick(View v) {
+                viewModel.mSuccess.observe(getViewLifecycleOwner(), new Observer<WSSuccess>( ) {
+                    @Override
+                    public void onChanged(WSSuccess wsSuccess) {
+                        viewModel.mSongs.observe(getViewLifecycleOwner( ), observerSongs());
+                        viewModel.getQueue();
+                        viewModel.mActualSong.observe(getViewLifecycleOwner(), observerActual());
+                        viewModel.getActualSong();
+                    }
+                });
+                viewModel.skipNext();
+
+            }
+        });
+
+        binding.btnPrevious.setOnClickListener(new View.OnClickListener( ) {
+            @Override
+            public void onClick(View v) {
+                viewModel.mSuccess.observe(getViewLifecycleOwner( ), new Observer<WSSuccess>( ) {
+                    @Override
+                    public void onChanged(WSSuccess wsSuccess) {
+                        viewModel.mSongs.observe(getViewLifecycleOwner( ), observerSongs());
+                        viewModel.getQueue();
+                        viewModel.mActualSong.observe(getViewLifecycleOwner(), observerActual());
+                        viewModel.getActualSong();
+                    }
+                });
+                viewModel.skipPrevious();
+            }
+        });
+    }
+
+    public Observer<List<Song>> observerSongs(){
+        return new Observer<List<Song>>( ) {
             @Override
             public void onChanged(List<Song> songs) {
-                RecyclerView rcyPlaylist = view.findViewById(R.id.rcyPlaylist);
-                SongAdapter songAdapter = new SongAdapter(songs, getContext());
+                SongAdapter songAdapter = new SongAdapter(songs, getContext( ));
 
+                binding.progressBar.setVisibility(View.GONE);
                 binding.rcyPlaylist.setLayoutManager(new LinearLayoutManager(getContext()));
                 binding.rcyPlaylist.setAdapter(songAdapter);
                 binding.rcyPlaylist.setHasFixedSize(true);
-                binding.progressBar.setVisibility(View.GONE);
             }
-        });
-        viewModel.getQueue();
+        };
+    }
+
+    public Observer<Song> observerActual(){
+        return new Observer<Song>( ) {
+            @Override
+            public void onChanged(Song song) {
+                binding.rcyActualSong.setLayoutManager(new LinearLayoutManager(getContext()));
+                List<Song> songActual = new ArrayList<>();
+                songActual.add(song);
+                binding.rcyActualSong.setAdapter(new SongAdapter(songActual, getContext( )));
+                binding.rcyActualSong.setHasFixedSize(true);
+            }
+        };
     }
 }

@@ -51,4 +51,19 @@ public class ApiManager {
         Call<WSGetSongs> call = mSongApi.getQueue();
         call.enqueue(callback);
     }
+
+    public void skipNext(Callback <WSSuccess> callback) {
+        Call<WSSuccess> call = mSongApi.skipNext();
+        call.enqueue(callback);
+    }
+
+    public void skipPrevious(Callback <WSSuccess> callback) {
+        Call<WSSuccess> call = mSongApi.skipPrevious();
+        call.enqueue(callback);
+    }
+
+    public void getCurrentlyPlayingSong(Callback <WSGetSongs> callback) {
+        Call<WSGetSongs> call = mSongApi.getCurrentlyPlayingSong();
+        call.enqueue(callback);
+    }
 }
