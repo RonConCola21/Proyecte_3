@@ -1,0 +1,170 @@
+[
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_icon.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_qr_icon.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\qr_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fragment_forgotten_password.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_forgotten_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fragment_playback_queue.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_playback_queue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_add.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\add.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_cover.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\cover.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fragment_sign_in.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_sign_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fragment_new_song.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_new_song.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_profile.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\profile.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fragment_q_r.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_q_r.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_addb.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\addb.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_pp.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\pp.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_background2.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\background2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fila.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fila.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_battery.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\battery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_search.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\search.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-pngs-60:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.jukeapp-merged_res-64:/layout_fragment_playback_queue.xml.flat",
+        "source": "com.example.jukeapp-main-66:/layout/fragment_playback_queue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_searchb.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\searchb.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fragment_whitelist.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_whitelist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\navigation_nav_schema.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\navigation\\nav_schema.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\layout_fragment_log_in.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_log_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-anydpi-v33\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\drawable_list.png.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\drawable\\list.png"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-merged_res-64:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\mipmap-xxhdpi\\ic_launcher.webp"
+    }
+]

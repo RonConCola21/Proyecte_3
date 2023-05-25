@@ -98,6 +98,6 @@ public class PlaylistFragment extends Fragment {
                 binding.progressBar.setVisibility(View.GONE);
             }
         });
-        viewModel.getMSongs();
+        viewModel.getQueue();
     }
 }

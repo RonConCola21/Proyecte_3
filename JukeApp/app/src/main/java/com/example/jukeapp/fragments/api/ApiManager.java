@@ -46,4 +46,9 @@ public class ApiManager {
         Log.i("info", "updateSong: " + son_id + " " + son_status);
         call.enqueue(callback);
     }
+
+    public void getQueue(Callback <WSGetSongs> callback) {
+        Call<WSGetSongs> call = mSongApi.getQueue();
+        call.enqueue(callback);
+    }
 }

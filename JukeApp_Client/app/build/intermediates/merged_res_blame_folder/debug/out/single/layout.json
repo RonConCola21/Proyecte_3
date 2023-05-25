@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fila.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fila.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fragment_new_song.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_new_song.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fragment_whitelist.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_whitelist.xml"
+    },
+    {
+        "merged": "com.example.jukeapp-mergeDebugResources-63:/layout/fragment_playback_queue.xml",
+        "source": "com.example.jukeapp-main-66:/layout/fragment_playback_queue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fragment_playback_queue.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_playback_queue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fragment_q_r.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_q_r.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fragment_log_in.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_log_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fragment_forgotten_password.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_forgotten_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-mergeDebugResources-63:\\layout\\fragment_sign_in.xml",
+        "source": "C:\\Users\\Manuel\\.gradle\\daemon\\8.0\\com.example.jukeapp-main-66:\\layout\\fragment_sign_in.xml"
+    }
+]

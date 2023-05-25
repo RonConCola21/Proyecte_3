@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <View android:id="@+id/vieSelected"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background2"
+        app:layout_constraintLeft_toLeftOf="@id/grdl"
+        app:layout_constraintTop_toTopOf="@id/grdl"
+        app:layout_constraintRight_toRightOf="@id/grdl"
+        app:layout_constraintBottom_toBottomOf="@id/grdl"
+        ></View>
+    <GridLayout
+        android:id="@+id/grdl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgSong"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:src="@drawable/cover"
+            android:layout_gravity="center_vertical"
+            ></ImageView>
+        <TextView
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvName"
+            android:layout_columnWeight="1"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="Ella baila sola"
+            android:layout_gravity="center_vertical"
+            ></TextView>
+        <TextView
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvArtist1"
+            android:layout_columnWeight="1"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:text="Eslabon Armado"
+            android:layout_gravity="center_vertical"
+            ></TextView>
+        <TextView
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvArtist2"
+            android:layout_columnWeight="1"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:text="Peso Pluma"
+            android:layout_gravity="center_vertical"
+            ></TextView>
+        <TextView
+            android:id="@+id/txvAlbum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_columnWeight="1"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:text="Ella baila sola"
+            android:layout_rowSpan="2"
+            android:layout_gravity="center_vertical"></TextView>
+        <TextView
+            android:id="@+id/txvDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_column="4"
+            android:layout_row="0"
+            android:text="2:46"
+            android:textSize="20dp"
+            android:layout_rowSpan="2"
+            android:layout_gravity="center_vertical"
+            ></TextView>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

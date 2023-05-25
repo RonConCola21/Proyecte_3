@@ -11,7 +11,9 @@ public interface SongApi {
     @GET("song/{status}")
     Call<WSGetSongs> getSongs(@Path("status") String status);
 
-
     @POST("updateSong")
     Call<WSUpdateSong> updateSong(@Query("son_id") int son_id, @Query("son_status") String son_status);
+
+    @GET("getQueue")
+    Call<WSGetSongs> getQueue();
 }

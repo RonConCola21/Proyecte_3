@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/navigation_bar_item_active_indicator_view"
+        android:icon="@drawable/qr_icon"
+        android:title="Llegir QR"/>
+    <item
+        android:id="@+id/navigation_bar_item_active_indicator_view2"
+        android:icon="@drawable/list"
+        android:title="Cançons"/>
+    <item
+        android:id="@+id/navigation_bar_item_active_indicator_view3"
+        android:icon="@drawable/pp"
+        android:title="Cua/historial"/>
+    <item
+        android:id="@+id/navigation_bar_item_active_indicator_view4"
+        android:icon="@drawable/profile"
+        android:title="Perfil"/>
+</menu>

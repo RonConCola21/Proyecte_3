@@ -11,12 +11,8 @@ public class PlaylistViewModel extends ViewModel {
     public MutableLiveData<List<Song>> mSongs = new MutableLiveData<>();
 
 
-    public void getMSongs() {
-        Song.getSong(mSongs, "w");
-    }
-
-    public void updateMSong(){
-        Song.updateSong(1, "b");
+    public void getQueue() {
+        Song.getQueue(mSongs);
     }
 
 }

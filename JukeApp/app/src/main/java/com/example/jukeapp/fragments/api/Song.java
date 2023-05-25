@@ -151,4 +151,22 @@ public class Song {
         });
     }
 
+    public static void getQueue(MutableLiveData<List<Song>> mSongs){
+        ApiManager.getInstance().getQueue(new Callback<WSGetSongs>() {
+            @Override
+            public void onResponse(Call<WSGetSongs> call, Response<WSGetSongs> response) {
+                if (response.isSuccessful()) {
+                    WSGetSongs wsGetSongs = response.body();
+                    List<Song> songs = wsGetSongs.getData();
+                    mSongs.postValue(songs);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<WSGetSongs> call, Throwable t) {
+                Log.d("Error", t.getMessage());
+            }
+        });
+    }
+
 }
