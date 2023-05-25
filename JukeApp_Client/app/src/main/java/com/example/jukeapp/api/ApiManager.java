@@ -57,8 +57,8 @@ public class ApiManager {
         call.enqueue(callback);
     }
 
-    public void createUser(String user_nick, String user_email, String user_password, Callback <WSCreate> callback) {
-        Call<WSCreate> call = mSongApi.createUser(user_nick, user_email, user_password);
+    public void createUser(String user_nick, String user_email, String user_password, Callback <GetUserSuccess> callback) {
+        Call<GetUserSuccess> call = mSongApi.createUser(user_nick, user_email, user_password);
         call.enqueue(callback);
     }
 
@@ -74,6 +74,11 @@ public class ApiManager {
 
     public void getHistory(Callback <WSGetSongs> callback) {
         Call<WSGetSongs> call = mSongApi.getHistory();
+        call.enqueue(callback);
+    }
+
+    public void addSongQueue(String song_id, int user_id, Callback <WSCreate> callback) {
+        Call<WSCreate> call = mSongApi.addSongQueue(song_id, user_id);
         call.enqueue(callback);
     }
 }

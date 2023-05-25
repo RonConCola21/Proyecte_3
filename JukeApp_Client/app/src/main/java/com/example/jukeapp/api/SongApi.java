@@ -21,7 +21,7 @@ public interface SongApi {
     Call<GetUserSuccess> getUser(@Query("user_nick") String user_nick, @Query("user_password") String user_password);
 
     @POST("createUser")
-    Call<WSCreate> createUser(@Query("user_nick")String user_nick, @Query("user_email")String user_email, @Query("user_password")String user_password);
+    Call<GetUserSuccess> createUser(@Query("user_nick")String user_nick, @Query("user_email")String user_email, @Query("user_password")String user_password);
 
     @POST("createSong")
     Call<WSCreate> createSong(@Query("son_spotify_id")String son_spotify_id, @Query("son_status")String son_status,
@@ -34,4 +34,7 @@ public interface SongApi {
 
     @GET("getHistory")
     Call<WSGetSongs> getHistory();
+
+    @POST("adddSongQueue")
+    Call<WSCreate> addSongQueue(@Query("song_id")String song_id, @Query("user_id")int user_id);
 }

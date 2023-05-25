@@ -23,6 +23,7 @@ import android.view.ViewGroup;
 import com.example.jukeapp.R;
 import com.example.jukeapp.adapter.SongAdapter;
 import com.example.jukeapp.api.GetUserSuccess;
+import com.example.jukeapp.api.WSCreate;
 import com.example.jukeapp.databinding.FragmentWhitelistBinding;
 import com.example.jukeapp.api.Song;
 import com.example.jukeapp.fragment.LogIn.LogInFragment;
@@ -142,6 +143,18 @@ public class WhitelistFragment extends Fragment implements SongAdapter.SongSelec
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Afegir cançó a la llista de reproducció
+                        viewModel.mSong2Queue.observe(getViewLifecycleOwner( ), new Observer<WSCreate>( ) {
+                            @Override
+                            public void onChanged(WSCreate wsCreate) {
+                                if (wsCreate != null) {
+                                    Log.i("Valor id_user", "El valor de id user es: " + user.getUserId());
+                                    Log.i("Valor id_song", "El valor de id song es: " + seleccionat.getSonSpotifyId());
+
+                                }
+                            }
+                        });
+                        viewModel.addSongQueue(seleccionat.getSonSpotifyId(), user.getUserId());
+
                     }
                 })
 

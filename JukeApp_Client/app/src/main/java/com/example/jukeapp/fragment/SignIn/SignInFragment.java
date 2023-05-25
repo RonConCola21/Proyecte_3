@@ -15,8 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jukeapp.R;
+import com.example.jukeapp.api.GetUserSuccess;
 import com.example.jukeapp.api.WSCreate;
 import com.example.jukeapp.databinding.FragmentSignInBinding;
+import com.example.jukeapp.fragment.LogIn.LogInFragment;
+import com.example.jukeapp.fragment.Whitelist.WhitelistFragment;
 import com.example.jukeapp.hash.SHA1Utils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,6 +28,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
     FragmentSignInBinding binding;
     NavController navController;
     SignInViewModel viewModel;
+    LogInFragment.MyListener listener;
     public SignInFragment() {
         // Required empty public constructor
     }
@@ -76,13 +80,17 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
                     break;
                 }
 
-                viewModel.mUser.observe(getViewLifecycleOwner( ), new Observer<WSCreate>( ) {
+                viewModel.mUser.observe(getViewLifecycleOwner( ), new Observer<GetUserSuccess>( ) {
                     @Override
-                    public void onChanged(WSCreate wsCreate) {
-                        Log.d("TAG", "Valor success: " + wsCreate.getSuccess());
-                        if (wsCreate.getSuccess().equals("ok")){
+                    public void onChanged(GetUserSuccess getUserSuccess) {
+                        Log.d("TAG", "Valor success: " + getUserSuccess.getSuccess());
+                        if (getUserSuccess.getSuccess().equals("ok")){
                             navController = NavHostFragment.findNavController(SignInFragment.this);
-                            navController.navigate(R.id.action_signInFragment_to_whitelistFragment);
+                            Bundle args = new Bundle();
+                            args.putParcelable(WhitelistFragment.USER, getUserSuccess);
+                            Log.i("TAG", "onChanged: " + getUserSuccess);
+//                            listener.onVariablePassed(args);
+                            navController.navigate(R.id.action_signInFragment_to_whitelistFragment, args);
                         }
                         else {
                             AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
