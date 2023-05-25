@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,8 @@ namespace BdLib
             this.cadena = cadena;
             this.valor = valor;
         }
+
+
 
         #region properties
         public int Id
@@ -51,7 +54,7 @@ namespace BdLib
         }
         #endregion
 
-        public static Boolean insert(ActiveTokenDb at)
+        public static Boolean insert(String at)
         {
             try
             {
@@ -63,22 +66,14 @@ namespace BdLib
                         DbTransaction transaction = connection.BeginTransaction();
                         using (var cmd = connection.CreateCommand())
                         {
-                            cmd.CommandText = "insert into active_token(at_id,at_moment_temp, at_cadena, at_value) values (@p_at_id, @p_at_moment_temp, @p_at_cadena, @p_at_value)";
-                            DbUtils.afegirParametre(cmd, "p_at_id", null, DbType.Int32);
-                            DbUtils.afegirParametre(cmd, "p_at_moment_temp", at.moment_temp, DbType.DateTime);
-                            DbUtils.afegirParametre(cmd, "p_at_value", at.valor, DbType.Int32);
-                            DbUtils.afegirParametre(cmd, "p_at_cadena", at.cadena, DbType.String);
+                            cmd.CommandText = "insert into active_token values (null, sysdate(), '"+at+"', 50);";
 
                             Int32 filesinserides = cmd.ExecuteNonQuery();
 
                             if (filesinserides == 1)
                             {
-                                int updated = cmd.ExecuteNonQuery();
-                                if (updated == 1)
-                                {
-                                    transaction.Commit();
-                                    return true;
-                                }
+                                transaction.Commit();
+                                return true;
                             }
                         }
                     }
@@ -86,7 +81,7 @@ namespace BdLib
             }
             catch (Exception ex)
             {
-
+                Debug.Write(ex.ToString());
             }
             return false;
         }

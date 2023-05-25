@@ -19,6 +19,8 @@ using ZXing.Rendering;
 using System.Threading.Tasks;
 using Windows.Graphics.Imaging;
 using Windows.Storage.Streams;
+using BdLib;
+using Windows.UI.Popups;
 
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
@@ -37,17 +39,27 @@ namespace QrGenerator
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            webview.Navigate(new Uri("https://www.qr-code-generator.com/"));
         }
 
-        private void Generar_Click(object sender, RoutedEventArgs e)
+        private async void Generar_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
             int firstPart = random.Next();
             int secondPart = random.Next();
             long randomNumber = ((long)firstPart << 32) | secondPart;
 
-            txbLong.Text = randomNumber.ToString();
+            bool res = ActiveTokenDb.insert(randomNumber.ToString());
+            
+            if (!res)
+            {
+                await new MessageDialog("Error en generar QR", "Error").ShowAsync();
+            } else
+            {
+                txbLong.Text = randomNumber.ToString();
+                webview.Navigate(new Uri("https://www.qr-code-generator.com/"));
+            }
+            
         }
 
     }
