@@ -10570,7 +10570,7 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.2.14": {
-      "sha512": "7Mi4cS8JQ7gqm+W+SRCq13c2Rr0yZTuczC9EbV6gRigE2ZhQalnLHyat0ZshT5HDMSkFDxTyjwZymUgFuv3+eg==",
+      "sha512": "20T91+/vQhL8c//GFU9qkNnys2BVdzAr9smULuP4p9csXwYjuoqxwAjNxLH0FvApGdB3s0sGhHkSeLg3IQBdMw==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.2.14",
       "files": [
@@ -10908,7 +10908,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -15387,18 +15387,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Carles\\.nuget\\packages\\": {},
+    "C:\\Users\\isard\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Mila\\2n\\M13\\Projecte3\\QrGenerator\\BdLib\\BdLib.csproj",
+      "projectUniqueName": "C:\\Users\\isard\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj",
       "projectName": "BdLib",
-      "projectPath": "D:\\Mila\\2n\\M13\\Projecte3\\QrGenerator\\BdLib\\BdLib.csproj",
-      "packagesPath": "C:\\Users\\Carles\\.nuget\\packages\\",
-      "outputPath": "D:\\Mila\\2n\\M13\\Projecte3\\QrGenerator\\BdLib\\obj\\",
+      "projectPath": "C:\\Users\\isard\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj",
+      "packagesPath": "C:\\Users\\isard\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\isard\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -15406,7 +15406,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Carles\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\isard\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -1,2 +1,2 @@
-D:\Mila\2n\M13\Projecte3\QrGenerator\BdLib\BdLib.csproj;x86
-D:\Mila\2n\M13\Projecte3\QrGenerator\QrGenerator\QrGenerator.csproj;x86
+C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\BdLib\BdLib.csproj;x86
+C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\QrGenerator.csproj;x86

@@ -72,17 +72,18 @@ create table queue(
 
 create table spotify_token(
 	id int default 1,
-	st_token varchar(200),
+	st_token varchar(1000),
+	st_refresh_token varchar(200),
 	st_datetime datetime,
 	constraint pk_spotify_token primary key (id)
 );
-insert into users values (null,'admin','admin@gmail.com', 'admin', 0);
-insert into users values (null,'cferrer1','cferrer1@milaifontanals.org', 'admin', 0);
-insert into users values (null,'mpaez','mpaez@milaifontanals.org', 'admin', 0);
+insert into users values (null,'admin','admin@gmail.com', 'D033E22AE348AEB5660FC2140AEC35850C4DA997', 0);
+insert into users values (null,'cferrer1','cferrer1@milaifontanals.org', 'D033E22AE348AEB5660FC2140AEC35850C4DA997', 0);
+insert into users values (null,'mpaez','mpaez@milaifontanals.org', 'D033E22AE348AEB5660FC2140AEC35850C4DA997', 0);
 
-insert into active_token values (null, sysdate(), 'akdgvjbalsdfhjblaskdjvasnñlgnkanba', 100);
+insert into active_token values (null, sysdate(), 'akdgvjbalsdfhjblaskdjvasnñlgnkanba', 50);
 insert into active_token values (null, sysdate(), 'kjbclabncasvjlasdnv,ahsdvlasdbvads', 50);
-insert into active_token values (null, sysdate(), 'asdvasdalsdfhjblaskdjvasnñlgnkanba', 100);
+insert into active_token values (null, sysdate(), 'asdvasdalsdfhjblaskdjvasnñlgnkanba', 50);
 
 insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b27329ebee2b5fb008871fcd201a', '6XSqqQIy7Lm7SnwxS4NrGx', 'Young Miko', 'Feid', 'Single', 'Classy 101', 195, 'w');
 insert into song values (null, 'https://i.scdn.co/image/ab67616d0000b2731e0950bcdb5495e2038e0d14', '5MxFWjuqQIsbNWbMdMdbli', 'Bad Bunny', 'Arcàngel', 'Single', 'La Jumpa', 236, 'b');
