@@ -8,17 +8,21 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.jukeapp.api.GetUserSuccess;
+import com.example.jukeapp.fragment.LogIn.LogInFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener, LogInFragment.MyListener {
     private BottomNavigationView bottomNavigationView;
     private NavController navController;
     private boolean doubleBackToExitPressedOnce = false;
     private Handler mHandler = new Handler();
+    public Bundle args = new Bundle();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +60,9 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
                 navController.navigate(R.id.action_global_QRFragment);
                 return true;
             case R.id.navigation_bar_item_active_indicator_view2:
-                navController.navigate(R.id.action_global_whitelistFragment);
+
+
+                navController.navigate(R.id.action_logInFragment_to_whitelistFragment, args);
                 return true;
             case R.id.navigation_bar_item_active_indicator_view3:
                 navController.navigate(R.id.action_global_playbackQueueFragment);
@@ -66,5 +72,10 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
                 return true;
         }
         return false;
+    }
+
+    @Override
+    public void onVariablePassed(Bundle variable) {
+        args = variable;
     }
 }

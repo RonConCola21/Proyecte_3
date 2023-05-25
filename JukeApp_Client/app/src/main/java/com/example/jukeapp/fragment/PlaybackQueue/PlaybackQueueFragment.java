@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
@@ -17,10 +19,14 @@ import com.example.jukeapp.adapter.SongAdapter;
 import com.example.jukeapp.databinding.FragmentPlaybackQueueBinding;
 import com.example.jukeapp.api.Song;
 
+import java.util.List;
+
 
 public class PlaybackQueueFragment extends Fragment implements CompoundButton.OnCheckedChangeListener, SongAdapter.SongSelectedListener {
     private FragmentPlaybackQueueBinding binding;
     private SongAdapter adapter;
+
+    private PlayBackQueueViewModel viewModel;
     public PlaybackQueueFragment() {
         // Required empty public constructor
     }
@@ -57,6 +63,9 @@ public class PlaybackQueueFragment extends Fragment implements CompoundButton.On
         super.onViewCreated(view, savedInstanceState);
         binding.switchPQ.setOnCheckedChangeListener(this);
         binding.recycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        viewModel = new ViewModelProvider(this).get(PlayBackQueueViewModel.class);
+        viewModel.mQueue.observe(getViewLifecycleOwner(), getQueue());
+        viewModel.getQueue();
 //        adapter = new SongAdapter(Song.getSongs2(),this);
 //        binding.recycler.setAdapter(adapter);
     }
@@ -64,13 +73,41 @@ public class PlaybackQueueFragment extends Fragment implements CompoundButton.On
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         if (b) {
+            binding.progressBar.setVisibility(View.VISIBLE);
             binding.switchPQ.setText("Historial");
-//            adapter = new SongAdapter(Song.getSongs3(),this);
+            adapter.clearData();
+            viewModel.mHistory.observe(getViewLifecycleOwner( ), getHistory());
+            viewModel.getHistory();
         } else {
+            binding.progressBar.setVisibility(View.VISIBLE);
             binding.switchPQ.setText("En cua");
-//            adapter = new SongAdapter(Song.getSongs2(),this);
+            adapter.clearData();
+            viewModel.mQueue.observe(getViewLifecycleOwner(), getQueue());
+            viewModel.getQueue();
         }
         binding.recycler.setAdapter(adapter);
+    }
+
+    public Observer<List<Song>> getQueue(){
+        return new Observer<List<Song>>( ) {
+            @Override
+            public void onChanged(List<Song> songs) {
+                adapter = new SongAdapter(songs, PlaybackQueueFragment.this);
+                binding.recycler.setAdapter(adapter);
+                binding.progressBar.setVisibility(View.GONE);
+            }
+        };
+    }
+
+    public Observer<List<Song>> getHistory(){
+        return new Observer<List<Song>>( ) {
+            @Override
+            public void onChanged(List<Song> songs) {
+                adapter = new SongAdapter(songs, PlaybackQueueFragment.this);
+                binding.recycler.setAdapter(adapter);
+                binding.progressBar.setVisibility(View.GONE);
+            }
+        };
     }
 
     @Override

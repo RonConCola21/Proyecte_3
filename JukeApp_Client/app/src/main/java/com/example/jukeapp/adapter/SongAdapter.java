@@ -3,6 +3,8 @@ package com.example.jukeapp.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,11 +15,14 @@ import com.example.jukeapp.R;
 import com.example.jukeapp.api.Song;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
 
     private List<Song> mSongs;
+    private List<Song> filteredSongs;
     private int mPosItemSeleccionat = -1;
     private SongSelectedListener mListener;
 
@@ -40,7 +45,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull SongAdapter.ViewHolder holder, int position) {
-        Song s = mSongs.get(position);
+        Song s = filteredSongs.get(position);
         holder.txvName.setText(s.getSonName());
         holder.txvArtist1.setText(s.getSonArtist1());
         holder.txvArtist2.setText(s.getSonArtist2());
@@ -53,7 +58,29 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return mSongs.size();
+        return filteredSongs.size();
+    }
+
+    public void filtrer(String query){
+        int longitud = query.length();
+        if(longitud==0) {
+            filteredSongs.clear( );
+            filteredSongs.addAll(mSongs);
+        }else {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                List<Song> col = filteredSongs.stream().filter(s -> s.getSonName().toLowerCase().contains(query.toLowerCase())).collect(Collectors.toList());
+                filteredSongs.clear();
+                filteredSongs.addAll(col);
+            }
+            else {
+                for (Song s : mSongs) {
+                    if (s.getSonName().toLowerCase().contains(query.toLowerCase())) {
+                        filteredSongs.add(s);
+                    }
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 
     public interface SongSelectedListener {
@@ -63,6 +90,8 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
     public SongAdapter(List<Song> pSongs, SongSelectedListener listener) {
         mListener = listener;
         mSongs = pSongs;
+        filteredSongs = new ArrayList<>();
+        filteredSongs.addAll(mSongs);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -81,5 +110,10 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
             txvAlbum = fila.findViewById(R.id.txvAlbum);
             imvImage = fila.findViewById(R.id.imgSong);
         }
+    }
+
+    public void clearData(){
+        mSongs.clear();
+        notifyDataSetChanged();
     }
 }

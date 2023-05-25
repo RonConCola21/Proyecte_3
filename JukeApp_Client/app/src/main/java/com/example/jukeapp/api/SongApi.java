@@ -28,4 +28,10 @@ public interface SongApi {
                               @Query("son_name")String son_name, @Query("son_artist1")String son_artist1,
                               @Query("son_artist2")String son_artist2, @Query("son_duration")Double son_duration,
                               @Query("son_img")String son_img, @Query("son_album")String son_album,@Query("user_id")int user_id);
+
+    @GET("getQueue")
+    Call<WSGetSongs> getQueue();
+
+    @GET("getHistory")
+    Call<WSGetSongs> getHistory();
 }

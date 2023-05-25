@@ -1,8 +1,10 @@
 package com.example.jukeapp.fragment.LogIn;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -27,6 +29,18 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
 
     FragmentLogInBinding binding;
     LogInViewModel viewModel;
+
+    private MyListener listener;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof MyListener) {
+            listener = (MyListener) context;
+        } else {
+            throw new RuntimeException(context.toString() + " must implement MyListener");
+        }
+    }
 
     private NavController navController;
     public LogInFragment() {
@@ -83,6 +97,7 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
                                     navController = NavHostFragment.findNavController(LogInFragment.this);
                                     Bundle args = new Bundle();
                                     args.putParcelable(WhitelistFragment.USER, getUserSuccess);
+                                    listener.onVariablePassed(args);
                                     navController.navigate(R.id.action_logInFragment_to_whitelistFragment, args);
                                 }
                             }else{
@@ -110,5 +125,9 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
                 navController.navigate(R.id.action_logInFragment_to_forgottenPasswordFragment3);
                 break;
         }
+    }
+
+    public interface MyListener {
+        void onVariablePassed(Bundle variable);
     }
 }

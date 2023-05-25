@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -89,22 +90,36 @@ public class WhitelistFragment extends Fragment implements SongAdapter.SongSelec
                         navController.navigate(R.id.action_whitelistFragment_to_newSongFragment, args);
                     }
                 });
-                binding.btnSearch.setOnClickListener(new View.OnClickListener() {
+
+                binding.svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener( ) {
                     @Override
-                    public void onClick(View view) {
-                        String text = binding.edtSearch.getText().toString();
-//                        if (!text.isEmpty()) {
-//                            for (Song s : Song.getSong(songs, "w")) {
-//                                if (s.getSonName().toLowerCase().contains(text.toLowerCase())) {
-//                                    songs.add(s);
-//                                }
-//                            }
-//                            adapter.setSongs(songs);
-//                        } else {
-//                            adapter.setSongs(Song.getSong(songs, "w"));
-//                        }
+                    public boolean onQueryTextSubmit(String query) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                        adapter.filtrer(newText);
+                        return false;
                     }
                 });
+
+//                binding.btnSearch.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        String text = binding.edtSearch.getText().toString();
+////                        if (!text.isEmpty()) {
+////                            for (Song s : Song.getSong(songs, "w")) {
+////                                if (s.getSonName().toLowerCase().contains(text.toLowerCase())) {
+////                                    songs.add(s);
+////                                }
+////                            }
+////                            adapter.setSongs(songs);
+////                        } else {
+////                            adapter.setSongs(Song.getSong(songs, "w"));
+////                        }
+//                    }
+//                });
                 //Recycler
                 binding.recycler.setLayoutManager(new LinearLayoutManager(requireContext()));
                 adapter = new SongAdapter(songs, WhitelistFragment.this);

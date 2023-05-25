@@ -61,4 +61,19 @@ public class ApiManager {
         Call<WSCreate> call = mSongApi.createUser(user_nick, user_email, user_password);
         call.enqueue(callback);
     }
+
+    public void createSong(String son_spotify_id, String son_status, String son_name, String son_artist1, String son_artist2, Double son_duration, String son_img, String son_album, int user_id, Callback <WSCreate> callback) {
+        Call<WSCreate> call = mSongApi.createSong(son_spotify_id, son_status, son_name, son_artist1, son_artist2, son_duration, son_img, son_album, user_id);
+        call.enqueue(callback);
+    }
+
+    public void getQueue(Callback <WSGetSongs> callback) {
+        Call<WSGetSongs> call = mSongApi.getQueue();
+        call.enqueue(callback);
+    }
+
+    public void getHistory(Callback <WSGetSongs> callback) {
+        Call<WSGetSongs> call = mSongApi.getHistory();
+        call.enqueue(callback);
+    }
 }

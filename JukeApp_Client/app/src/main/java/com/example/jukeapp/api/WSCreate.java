@@ -43,5 +43,23 @@ public class WSCreate {
         });
     }
 
+    public static void createSong(String son_spotify_id, String son_status, String son_name, String son_artist1, String son_artist2, Double son_duration, String son_img, String son_album, int user_id, MutableLiveData<WSCreate> mSong){
+        ApiManager.getInstance().createSong(son_spotify_id, son_status, son_name, son_artist1, son_artist2, son_duration, son_img, son_album, user_id, new Callback<WSCreate>() {
+            @Override
+            public void onResponse(Call<WSCreate> call, Response<WSCreate> response) {
+                if (response.isSuccessful()) {
+                    Log.d("Success", "Canción creada");
+                    WSCreate wsCreate = response.body();
+                    mSong.postValue(wsCreate);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<WSCreate> call, Throwable t) {
+                Log.d("Error", t.getMessage());
+            }
+        });
+    }
+
 
 }

@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_schema"
     app:startDestination="@id/logInFragment">
+    <action
+        android:id="@+id/action_logInFragment_to_whitelistFragment"
+        app:destination="@id/whitelistFragment" />
     <fragment
         android:id="@+id/logInFragment"
         android:name="com.example.jukeapp.fragment.LogIn.LogInFragment"
@@ -14,9 +17,6 @@
         <action
             android:id="@+id/action_logInFragment_to_forgottenPasswordFragment3"
             app:destination="@id/forgottenPasswordFragment3" />
-        <action
-            android:id="@+id/action_logInFragment_to_whitelistFragment"
-            app:destination="@id/whitelistFragment" />
     </fragment>
     <fragment
         android:id="@+id/forgottenPasswordFragment3"

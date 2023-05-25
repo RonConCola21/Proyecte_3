@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
@@ -22,6 +23,7 @@ import com.example.jukeapp.adapter.SongAdapter;
 import com.example.jukeapp.api.ApiManager;
 import com.example.jukeapp.api.GetUserSuccess;
 import com.example.jukeapp.api.SongApi;
+import com.example.jukeapp.api.WSCreate;
 import com.example.jukeapp.databinding.FragmentNewSongBinding;
 import com.example.jukeapp.api.Song;
 import com.example.jukeapp.fragment.Whitelist.WhitelistFragment;
@@ -117,6 +119,26 @@ public class NewSongFragment extends Fragment implements View.OnClickListener, S
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Afegir cançó a la llista de reproducció
+                        viewModel.mCreatedSong.observe(getViewLifecycleOwner( ), new Observer<WSCreate>( ) {
+                            @Override
+                            public void onChanged(WSCreate wsCreate) {
+                                if(wsCreate != null){
+                                    if(wsCreate.getSuccess().equals("ok")){
+                                        goToWhiteList();
+                                    }
+                                    else {
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                                        builder.setTitle("Error");
+                                        builder.setMessage("No s'ha pogut afegir la cançó");
+                                        builder.create().show();
+                                    }
+                                }
+                            }
+                        });
+                        //Esto me da dolor de ojos
+                        viewModel.createSong(seleccionat.getSonSpotifyId(), seleccionat.getSonStatus(), seleccionat.getSonName(),
+                                seleccionat.getSonArtist1(), seleccionat.getSonArtist2(), seleccionat.getSonDuration(), seleccionat.getSonImg(),
+                                seleccionat.getSonAlbum(), user.getUserId());
                     }
                 })
 
@@ -124,5 +146,12 @@ public class NewSongFragment extends Fragment implements View.OnClickListener, S
                 .setNegativeButton(android.R.string.no, null)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
+    }
+
+    public void goToWhiteList(){
+        Bundle args = new Bundle();
+        args.putParcelable(NewSongFragment.USER, user);
+        navController = NavHostFragment.findNavController(NewSongFragment.this);
+        navController.navigate(R.id.action_newSongFragment_to_whitelistFragment, args);
     }
 }
