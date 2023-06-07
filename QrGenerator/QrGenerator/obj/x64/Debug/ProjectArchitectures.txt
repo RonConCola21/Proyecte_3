@@ -1,2 +1,2 @@
-C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\BdLib\BdLib.csproj;x64
-C:\Users\isard\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\QrGenerator.csproj;x64
+C:\Users\Manuel\Documents\GitHub\Proyecte_3\QrGenerator\BdLib\BdLib.csproj;neutral
+C:\Users\Manuel\Documents\GitHub\Proyecte_3\QrGenerator\QrGenerator\QrGenerator.csproj;x64

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\isard\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj": {}
+    "C:\\Users\\Manuel\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\isard\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj": {
+    "C:\\Users\\Manuel\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\isard\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj",
+        "projectUniqueName": "C:\\Users\\Manuel\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj",
         "projectName": "BdLib",
-        "projectPath": "C:\\Users\\isard\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj",
-        "packagesPath": "C:\\Users\\isard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\isard\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\obj\\",
+        "projectPath": "C:\\Users\\Manuel\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\BdLib.csproj",
+        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Manuel\\Documents\\GitHub\\Proyecte_3\\QrGenerator\\BdLib\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\isard\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
