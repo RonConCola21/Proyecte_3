@@ -112,6 +112,7 @@ class UserController extends Controller
             $user_nick = $request->user_nick;
             $user_email = $request->user_email;
             $user_password = $request->user_password;
+			$new_password = $request->new_password;
 
             $user = User::where('id','=',$user_id)->first();
 
@@ -129,7 +130,7 @@ class UserController extends Controller
             
             $user->user_nick = $user_nick;
             $user->user_email = $user_email;
-            $user->user_password = $user_password;
+            $user->user_password = $new_password;
 
             $user->save();
 

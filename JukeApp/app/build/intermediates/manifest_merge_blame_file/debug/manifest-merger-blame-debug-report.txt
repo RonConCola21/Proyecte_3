@@ -1,0 +1,123 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.jukeapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.9.0] C:\Users\Carles\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.jukeapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.9.0] C:\Users\Carles\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.9.0] C:\Users\Carles\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.jukeapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.9.0] C:\Users\Carles\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.9.0] C:\Users\Carles\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:7:5-27:19
+20        android:allowBackup="true"
+20-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:8:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.9.0] C:\Users\Carles\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:9:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:10:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:14:9-35
+30        android:theme="@style/Theme.JukeApp"
+30-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:15:9-45
+31        android:usesCleartextTraffic="true" >
+31-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:16:9-44
+32        <activity
+32-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:18:9-26:20
+33            android:name="com.example.jukeapp.MainActivity"
+33-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:19:13-41
+34            android:exported="true" >
+34-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:20:13-36
+35            <intent-filter>
+35-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:21:13-25:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:22:17-69
+36-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:22:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:24:17-77
+38-->C:\Users\Carles\Documents\GitHub\Proyecte_3\JukeApp\app\src\main\AndroidManifest.xml:24:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <provider
+42-->[com.squareup.picasso:picasso:2.71828] C:\Users\Carles\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+43            android:name="com.squareup.picasso.PicassoProvider"
+43-->[com.squareup.picasso:picasso:2.71828] C:\Users\Carles\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+44            android:authorities="com.example.jukeapp.com.squareup.picasso"
+44-->[com.squareup.picasso:picasso:2.71828] C:\Users\Carles\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+45            android:exported="false" />
+45-->[com.squareup.picasso:picasso:2.71828] C:\Users\Carles\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+46
+47        <activity
+47-->[com.spotify.android:auth:1.2.3] C:\Users\Carles\.gradle\caches\transforms-3\c2a4cbba1f0c6cf63ca87922ee536326\transformed\auth-1.2.3\AndroidManifest.xml:34:9-37:20
+48            android:name="com.spotify.sdk.android.auth.LoginActivity"
+48-->[com.spotify.android:auth:1.2.3] C:\Users\Carles\.gradle\caches\transforms-3\c2a4cbba1f0c6cf63ca87922ee536326\transformed\auth-1.2.3\AndroidManifest.xml:35:13-70
+49            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+49-->[com.spotify.android:auth:1.2.3] C:\Users\Carles\.gradle\caches\transforms-3\c2a4cbba1f0c6cf63ca87922ee536326\transformed\auth-1.2.3\AndroidManifest.xml:36:13-72
+50        </activity>
+51
+52        <provider
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Carles\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+53            android:name="androidx.startup.InitializationProvider"
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Carles\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+54            android:authorities="com.example.jukeapp.androidx-startup"
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Carles\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+55            android:exported="false" >
+55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Carles\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+56            <meta-data
+56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Carles\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Carles\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+58                android:value="androidx.startup" />
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Carles\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+59            <meta-data
+59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Carles\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Carles\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+61                android:value="androidx.startup" />
+61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Carles\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+62        </provider>
+63
+64        <uses-library
+64-->[androidx.window:window:1.0.0] C:\Users\Carles\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+65            android:name="androidx.window.extensions"
+65-->[androidx.window:window:1.0.0] C:\Users\Carles\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+66            android:required="false" />
+66-->[androidx.window:window:1.0.0] C:\Users\Carles\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+67        <uses-library
+67-->[androidx.window:window:1.0.0] C:\Users\Carles\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+68            android:name="androidx.window.sidecar"
+68-->[androidx.window:window:1.0.0] C:\Users\Carles\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+69            android:required="false" />
+69-->[androidx.window:window:1.0.0] C:\Users\Carles\.gradle\caches\transforms-3\f0dc90e6f96fdc6f66d57f65e4c3895a\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+70    </application>
+71
+72</manifest>

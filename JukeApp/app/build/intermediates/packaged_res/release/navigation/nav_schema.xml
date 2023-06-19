@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_schema"
+    app:startDestination="@id/playlistFragment">
+
+    <fragment
+        android:id="@+id/whitelistFragment"
+        android:name="com.example.jukeapp.fragments.WhitelistFragment"
+        android:label="fragment_whitelist"
+        tools:layout="@layout/fragment_whitelist" />
+    <action
+        android:id="@+id/action_global_whitelistFragment"
+        app:destination="@id/whitelistFragment" />
+    <fragment
+        android:id="@+id/playlistFragment"
+        android:name="com.example.jukeapp.fragments.PlaylistFragment"
+        android:label="fragment_playlist"
+        tools:layout="@layout/fragment_playlist" />
+    <fragment
+        android:id="@+id/blacklistFragment"
+        android:name="com.example.jukeapp.fragments.BlacklistFragment"
+        android:label="fragment_blacklist"
+        tools:layout="@layout/fragment_blacklist" />
+    <fragment
+        android:id="@+id/requestlistFragment"
+        android:name="com.example.jukeapp.fragments.RequestlistFragment"
+        android:label="fragment_requestlist"
+        tools:layout="@layout/fragment_requestlist" />
+    <action
+        android:id="@+id/action_global_playlistFragment"
+        app:destination="@id/playlistFragment" />
+    <action
+        android:id="@+id/action_global_blacklistFragment"
+        app:destination="@id/blacklistFragment" />
+    <action
+        android:id="@+id/action_global_requestlistFragment"
+        app:destination="@id/requestlistFragment" />
+</navigation>

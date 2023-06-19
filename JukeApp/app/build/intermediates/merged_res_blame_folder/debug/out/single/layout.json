@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.example.jukeapp-mergeDebugResources-40:/layout/activity_main.xml",
+        "source": "com.example.jukeapp-main-43:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.jukeapp-mergeDebugResources-40:/layout/fragment_playlist.xml",
+        "source": "com.example.jukeapp-main-43:/layout/fragment_playlist.xml"
+    },
+    {
+        "merged": "com.example.jukeapp-mergeDebugResources-40:/layout/fragment_requestlist.xml",
+        "source": "com.example.jukeapp-main-43:/layout/fragment_requestlist.xml"
+    },
+    {
+        "merged": "com.example.jukeapp-mergeDebugResources-40:/layout/fila_song.xml",
+        "source": "com.example.jukeapp-main-43:/layout/fila_song.xml"
+    },
+    {
+        "merged": "com.example.jukeapp-mergeDebugResources-40:/layout/fragment_blacklist.xml",
+        "source": "com.example.jukeapp-main-43:/layout/fragment_blacklist.xml"
+    },
+    {
+        "merged": "com.example.jukeapp-mergeDebugResources-40:/layout/fragment_whitelist.xml",
+        "source": "com.example.jukeapp-main-43:/layout/fragment_whitelist.xml"
+    }
+]
