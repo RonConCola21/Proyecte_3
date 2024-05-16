@@ -1,5 +1,5 @@
 # Proyecte_3
-This repository contain different projects: 2 android apps, a desktop app coded in c#, a webservice coded in php and the script to initialize the database with some demo data.
+This repository contains different projects: 2 android apps, a desktop app coded in c#, a webservice coded in php and the script to initialize the database with some demo data.
 
 #1 Android app
 User app for our product. Connects with the webservice to authenticate the user. Once you are authenticated you are granted acces to the different features: search new spotify songs, request them to be added to the list of songs that can be played, select a song to be played, see the queue, the history and the current song and modify user private information and read a barcode in order to earn tokens.
