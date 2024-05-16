@@ -7,8 +7,11 @@ User app for our product. Connects with the webservice to authenticate the user.
 #2 Android app
 Admin app. Can resolve either if the songs that are requested have to be accepted or denied. See the queue, the history and the current song, pass, pause and rewind the playing song. Modify the songs that are accepted or not.
 
-#3 C# App
+#3 C# App - QrGenerator
 Generates longs and adds them to the DB so the users can read them and earn points.
 
-#3 Webservice
+#4 Webservice
 Has all the endpoints to give service to all the apps. Connects to the spotify web api and resolves all the users' demands.
+
+#5 Script
+Initializes the DB used by the QrGenerator and the webservice
